@@ -1,0 +1,11 @@
+<article>
+    <scully-content></scully-content>
+</article>
+<nav>
+    <h4>All posts</h4>
+    <ul>
+        <li *ngFor="let route of routes$ | async">
+            <a [routerLink]="[route.route]">{{route?.title}}</a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,12 @@
+<header>
+    <h1>{{SITE_CONFIG.NAME}}</h1>
+    <a routerLink="/">Home</a> | <a routerLink="/about">About me</a>
+</header>
+
+<section>
+    <router-outlet></router-outlet>
+</section>
+
+<footer>
+    <p [innerHTML]="SITE_CONFIG.COPYRIGHT"></p>
+</footer>

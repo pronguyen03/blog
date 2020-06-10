@@ -1,0 +1,4 @@
+<article *ngFor="let route of routes$ | async">
+    <h3><a [routerLink]="[route.route]">{{route?.title}}</a></h3>
+    <p>{{route?.description}}</p>
+</article>

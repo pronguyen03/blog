@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header, footer, nav, article {
+    padding: 20px;
+}
+
+nav {
+    float: left;
+    width: 30%;
+}
+
+article {
+    float: left;
+    width: 70%;
+}
+
+section {
+    min-height: 70vh;
+}
+
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 600px) {
+    nav,
+    article {
+        width: 100%;
+        height: auto;
+    }
+}
