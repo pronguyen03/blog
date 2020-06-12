@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "nhannguyen-blog"
+    "default": "nhannguyendacoder",
+    "nhannguyendacoder": "nhannguyendacoder"
   }
 }
