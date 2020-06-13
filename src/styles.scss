@@ -13,18 +13,18 @@ nav ul {
     padding: 0;
 }
 
-header, footer, nav, article {
-    padding: 20px;
+header, footer, nav, .content {
+    padding: 30px;
 }
 
 nav {
     float: left;
-    width: 30%;
+    width: 40%;
 }
 
-article {
+.content {
     float: left;
-    width: 70%;
+    width: 60%;
 }
 
 section {
@@ -39,8 +39,14 @@ section:after {
 
 @media (max-width: 600px) {
     nav,
-    article {
+    .content {
         width: 100%;
         height: auto;
     }
+}
+
+.link {
+    text-decoration: underline;
+    color: #0000EE;
+    cursor: pointer;
 }

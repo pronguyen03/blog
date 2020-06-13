@@ -1,4 +1,21 @@
-<article *ngFor="let route of routes$ | async">
-    <h3><a [routerLink]="[route.route]">{{route?.title}}</a></h3>
-    <p>{{route?.description}}</p>
-</article>
+<section class="content">
+    <ng-container *ngIf="routes$ | async as routes">
+        <article *ngFor="let route of routes">
+            <h3><a [routerLink]="[route.route]">{{route?.title}}</a></h3>
+            <p>{{route?.description}}</p>
+        </article>
+
+        <article *ngIf="!routes || !routes.length">
+            Mình sẽ cập nhật các bài viết trong danh mục này trong tương lai. Bạn nhớ theo dõi Fanpage để nhận được thông báo nhé ^^
+        </article>
+    </ng-container>
+</section>
+
+<nav>
+    <h4>Danh mục</h4>
+    <ul>
+        <li *ngFor="let C of CATEGORIES">
+            <a [routerLink]="['/']" [queryParams]="{c: C.KEY}">{{C.NAME}}</a>
+        </li>
+    </ul>
+</nav>

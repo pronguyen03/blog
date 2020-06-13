@@ -67,6 +67,8 @@ description: <the short description of your post>
 published: <true or false, indicate whether or not show your post>
 keywords: <the keywords of your post, separate with commas>
 image: <a link to the thumbnail image of your post>
+categories: <the categories that your post belong, separate with commas>
+date: <YYYY-MM-DD>
 ---
 
 <The content of your post written in markdown>

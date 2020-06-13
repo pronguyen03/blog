@@ -1,6 +1,9 @@
 <header>
     <h1>{{SITE_CONFIG.NAME}}</h1>
-    <a routerLink="/">Home</a> | <a routerLink="/about">About me</a>
+    <ng-container *ngFor="let M of MENUS; let i = index">
+        <a routerLink="{{M.ROUTE}}">{{M.NAME}}</a> 
+        <span *ngIf="i !== MENUS.length -1"> | </span>
+    </ng-container>
 </header>
 
 <section>

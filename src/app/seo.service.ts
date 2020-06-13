@@ -36,7 +36,7 @@ export class SEOService {
     }
 
     private setMetaTags(meta: SEOData) {
-        this.meta.updateTag({ property: 'twitter:card', content: 'summary_large_image' });
+        this.meta.updateTag({ property: 'twitter:card', content: 'summary' });
         this.meta.updateTag({ property: 'og:type', content: 'article' });
         this.meta.updateTag({ property: 'og:site_name', content: SITE_CONFIG.NAME });
         this.meta.updateTag({ property: 'og:title', content: meta.title });

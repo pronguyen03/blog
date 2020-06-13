@@ -1,9 +1,11 @@
-<article>
-    <scully-content></scully-content>
-</article>
+<section class="content">
+    <article>
+        <scully-content></scully-content>
+    </article>
+</section>
 <nav>
-    <h4>All posts</h4>
-    <ul>
+    <h4>Các bài viết tương tự</h4>
+    <ul *ngFor="let routes$ of routes$s">
         <li *ngFor="let route of routes$ | async">
             <a [routerLink]="[route.route]">{{route?.title}}</a>
         </li>

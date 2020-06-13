@@ -1,17 +1,25 @@
 import { Component } from '@angular/core';
-import { ScullyRoutesService } from '@scullyio/ng-lib';
-import { map } from 'rxjs/operators'
+import { ScullyRoute } from '@scullyio/ng-lib';
+import { Observable } from 'rxjs';
+import { CATEGORIES } from '../constants';
+import { ActivatedRoute } from '@angular/router';
+import { RouteService } from '../route.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
+  CATEGORIES = CATEGORIES
   // For render all blog posts
-  routes$ = this.scullyRoutes.available$.pipe(
-    map((routes) => routes.filter((route) => route.route.includes('/blog'))),
-  );
+  routes$: Observable<ScullyRoute[]>
 
-  constructor(private scullyRoutes: ScullyRoutesService) { }
-
+  constructor(
+    routeService: RouteService,
+    route: ActivatedRoute
+  ) { 
+    route.queryParamMap.subscribe(qM => {
+      this.routes$ = routeService.getRoutes(qM.get('c'))
+    })
+  }
 }
