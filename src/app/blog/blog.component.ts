@@ -5,6 +5,7 @@ import { map, take } from 'rxjs/operators';
 import { SEOService } from '../seo.service';
 import { Observable } from 'rxjs';
 import { RouteService } from '../route.service';
+import { SITE_CONFIG } from '../site.config';
 
 declare var ng: any;
 
@@ -18,6 +19,7 @@ declare var ng: any;
 export class BlogComponent implements OnInit {
   // For related blog posts in the navbar
   routes$s: Observable<ScullyRoute[]>[] = []
+  SITE_CONFIG = SITE_CONFIG
 
   ngOnInit() {}
 

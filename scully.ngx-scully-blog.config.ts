@@ -8,7 +8,7 @@ export const config: ScullyConfig = {
       type: 'contentFolder',
       slug: {
         folder: "./blog"
-      }
+      },
     },
   }
 };

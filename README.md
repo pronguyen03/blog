@@ -75,6 +75,11 @@ date: <YYYY-MM-DD>
 
 ```
 
+File name of a blog post:
+
+`<category names> + <post title>.md`
+
+
 ## Still have questions?
 
 For any futher questions, just creat a new issue. Thank you.

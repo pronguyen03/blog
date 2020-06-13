@@ -9,7 +9,7 @@ exports.config = {
             type: 'contentFolder',
             slug: {
                 folder: "./blog"
-            }
+            },
         },
     }
 };

@@ -14,7 +14,7 @@ nav ul {
 }
 
 header, footer, nav, .content {
-    padding: 30px;
+    padding: 10px 30px;
 }
 
 nav {
@@ -27,7 +27,7 @@ nav {
     width: 60%;
 }
 
-section {
+section#main {
     min-height: 70vh;
 }
 
@@ -49,4 +49,10 @@ section:after {
     text-decoration: underline;
     color: #0000EE;
     cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }

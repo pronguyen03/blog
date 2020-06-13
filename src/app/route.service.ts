@@ -30,13 +30,21 @@ export class RouteService {
     routes: ScullyRoute[], 
     category?: string
   ): ScullyRoute[] {
+    console.log(routes)
     let results = routes.filter(route => route.route.includes('/blog'))
       .sort((rA, rB) => {
-        return new Date(rA.date).getTime() - new Date(rB.date).getTime()
+        return new Date(rB.date).getTime() - new Date(rA.date).getTime()
       })
 
+    console.log(results)
+
     return category ? 
-      results.filter(route => route.categories.includes(category)) : 
+      results.filter(route => {
+        if (!route.categories) {
+          return false
+        }
+        return route.categories.includes(category)
+      }) : 
       results
   }
 }
