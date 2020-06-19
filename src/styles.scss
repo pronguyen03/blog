@@ -14,7 +14,7 @@ nav ul {
 }
 
 header, footer, nav, .content {
-    padding: 10px 30px;
+    padding: 10px;
 }
 
 nav {
@@ -37,14 +37,6 @@ section:after {
     clear: both;
 }
 
-@media (max-width: 600px) {
-    nav,
-    .content {
-        width: 100%;
-        height: auto;
-    }
-}
-
 .link {
     text-decoration: underline;
     color: #0000EE;
@@ -55,4 +47,12 @@ img {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    nav,
+    .content {
+        width: 100%;
+        height: auto;
+    }
 }
