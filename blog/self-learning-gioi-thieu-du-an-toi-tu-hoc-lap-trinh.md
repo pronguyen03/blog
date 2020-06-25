@@ -2,7 +2,7 @@
 title: Giới thiệu dự án tôi tự học lập trình
 description: Tôi tự học lập trình là dự án hướng dẫn các bạn tự học về lập trình để có thể đi làm. Sau khi học xong, các bạn có thể ứng tuyển vào các vị trí fresher Frontend hay fresher Angular developer.
 published: true
-keywords: tu hoc lap trinh, lap trinh, tu hoc Angular, lap trinh angular, html, css, javascript
+keywords: tu hoc lap trinh, lap trinh, tu hoc Angular, lap trinh angular, html, css, javascript, fresher frontend, fresher angular
 categories: self-learning
 date: 2020-06-25
 image: https://nhannguyendacoder.web.app/assets/images/self-learning-gioi-thieu-du-an-toi-tu-hoc-lap-trinh/toi-tu-hoc-lap-trinh.jpg
@@ -37,19 +37,25 @@ Thông tin trong khóa học này được đúc kết từ các nghiên cứu k
 
 Khóa học này không nói về các vấn đề kỹ thuật, không có code nhưng là quá học quan trọng nhất trong cả dự án. Kiến thức trong khóa học không chỉ áp dụng cho học lập trình thôi. Bạn có thể áp dụng kiến thức học được để áp dụng học bất cứ kỹ năng nào, hay áp dụng cho việc học trên trường vẫn được.
 
+> [Xem thông tin chi tiết khóa học](https://nhannguyendacoder.web.app/blog/self-learning-huong-dan-tu-hoc-lap-trinh?s=blog)
+
 ### 2. Nhập môn lập trình với Javascript
 
 Nếu bạn mới bắt đầu học lập trình thì trong khóa học này bạn sẽ viết những dòng code đầu tiên và thấy nó hoạt động như thế nào.
 
-Mình biết là có nhiều bạn sẽ nghe nói là Javascript không tốt, như thế này, thế kia, nên học ngôn ngữ ABC tốt hơn. Theo mình thì các bạn không nên quan tâm tới vấn đề đó. Chúng ta cần một công cụ để học **tư duy lập trình**, học Javascript hay bất cứ ngôn ngữ nào khác cũng như nhau. Khi có tư duy lập trình rồi thì bạn học các ngôn ngữ khá rất nhanh, vì các ngôn ngữ lập trình đa số đều có các cấu trúc tương tự nhau. Và nếu có kinh nghiệm đủ rộng thì các bạn sẽ biết được là mỗi ngôn ngữ đều có điểm mạnh, điểm yếu riêng, và sẽ phù hợp cho từng loại dự án khác nhau, không có ngôn ngữ nào là hoàn hảo.
+Mình biết là có nhiều bạn sẽ nghe nói là Javascript không tốt, như thế này, thế kia, nên học ngôn ngữ ABC tốt hơn. Theo mình thì các bạn không nên quan tâm tới vấn đề đó. Chúng ta cần một công cụ để học **tư duy lập trình**, học Javascript hay bất cứ ngôn ngữ nào khác cũng như nhau. Khi có tư duy lập trình rồi thì bạn học các ngôn ngữ khá rất nhanh, vì các ngôn ngữ lập trình đa số đều có các cấu trúc tương tự nhau. Và nếu có kinh nghiệm đủ rộng thì các bạn sẽ biết được là mỗi ngôn ngữ đều có điểm mạnh, điểm yếu riêng, và sẽ phù hợp cho từng loại dự án khác nhau, không có ngôn ngữ nào là hoàn hảo cả.
 
 Mình chọn Javascript để cho các bạn tiếp cận với các kiến thức cơ bản trong lập trình vì hiện tại đây là ngôn ngữ khá phổ biến, Javascript có thể làm web front end (React, Angular), mobile (React Native), back end (Nodejs). 
+
+> Xem thông tin chi tiết khóa học (đang cập nhật)
 
 ### 3. HTML5, CSS, Javascript
 
 Có thể nói HTML5, CSS, Javascript là các công nghệ nền tảng của web. Trước khi học bất cứ framework nào thì các bạn phải nắm vững các nền tảng này. 
 
-Sau khi học khóa học này các bạn có thể tự xây dựng một website tĩnh như trang landing page quảng bá sản phẩm hay một CV cá nhân. 
+Sau khi học khóa học này các bạn có thể tự xây dựng một website tĩnh như trang landing page để quảng bá sản phẩm hay tự làm một CV cá nhân với HTML và CSS. 
+
+> Xem thông tin chi tiết khóa học (đang cập nhật)
 
 ### 4. Bootstrap 4
 
@@ -59,7 +65,9 @@ Bootstrap cung cấp các class tiện dụng cho lập trình viên. Thay vì p
 
 Hiện tại đa số các công ty đều dùng Bootstrap. Khi có kiến thức về Bootstrap bạn cũng có thể tự nghiên cứu các framework tương tự khác.
 
-Mình sẽ giới thiệu các thành phần cơ bản, hay sử dụng của Bootstrap trong khóa học này.
+Mình sẽ giới thiệu các thành phần cơ bản, hay được sử dụng của Bootstrap trong khóa học này.
+
+> Xem thông tin chi tiết khóa học (đang cập nhật)
 
 ### 5. Angular, Typescript, Reactive Programming
 
@@ -71,21 +79,29 @@ Trong khóa học này các bạn sẽ học các thành phần cơ bản về A
 
 Bên cạnh Angular, các bạn cũng sẽ được học các kiến thức liên quan như Typescript và Reactive Programming.
 
+> Xem thông tin chi tiết khóa học (đang cập nhật)
+
 ### 6. Git, Github
 
 Đa số các công ty lập trình đều dùng Git để quản lý source code. Github là nơi để lưu source code của dự án. Có thể sử dụng Git là một lợi thế của bạn trong quá trình tìm việc.
 
-Trong khóa học này các bạn sẽ tìm hiểu các hoạt động của Git và các lệnh Git hay dùng nhất.
+Trong khóa học này các bạn sẽ tìm hiểu các hoạt động của Git và các lệnh Git thông dụng nhất.
+
+> Xem thông tin chi tiết khóa học (đang cập nhật)
 
 ### 7. Làm quen với hệ điều hành Ubuntu
 
-Hầu hết các công ty lập trình đều sử dụng các hệ điều hành Linux hoặc tương tự như Ubuntu, MacOS. Thông thường mọi người sẽ dùng Ubuntu, khi dùng ubuntu rồi thì chuyển qua các hệ điều hành khác cũng nhanh thôi vì đa số các câu lệnh là như nhau. Biết cách sử dụng Ubuntu cũng là một ưu thế cho bạn trong khi tìm việc.
+Hầu hết các công ty lập trình đều sử dụng các hệ điều hành nhân Linux như Ubuntu, MacOS. Thông thường mọi người sẽ dùng Ubuntu, khi dùng Ubuntu rồi thì chuyển qua các hệ điều hành khác cũng nhanh thôi vì đa số các câu lệnh là như nhau. Biết cách sử dụng Ubuntu cũng là một ưu thế cho bạn trong khi tìm việc.
 
 Khóa học này sẽ hướng dẫn các bạn tổng quan về Ubuntu và những lệnh thường dùng nhất.
+
+> Xem thông tin chi tiết khóa học (đang cập nhật)
 
 ### 8. Kỹ năng mềm cần thiết cho fresher developer 
 
 Ngoài kiến thức chuyên môn thì kỹ năng mềm cũng là một phần rất quan trọng. Trong khóa học này mình sẽ chia sẻ các kỹ năng mềm cần thiết cho một fresher developer như cách chọn công ty, cách chuẩn bị CV, chuẩn bị phỏng vấn như thế nào, cách giải quyết khó khăn trong thời gian thử việc,...
+
+> Xem thông tin chi tiết khóa học (đang cập nhật)
 
 ### Project
 
@@ -95,7 +111,7 @@ Trong quá trình học, chúng ta sẽ hoàn thiện dần 4 project:
 - Todo list: Ứng dụng quản lý công việc hằng ngày.
 - Blog: Blog cá nhân đơn giản, các bạn có thể dùng để viết bài chia sẻ kiến thức.
 
-Mình sẽ hướng dẫn các bạn đưa tất cả các project trên lên mạng và mọi người có thể thấy được thành quả học tập của bạn. Các bạn hoàn toàn có thể đưa các project này vào CV của mình để đi xin việc.
+Mình sẽ hướng dẫn các bạn đưa tất cả các project trên lên mạng để mọi người, đặc biệt là nhà tuyển dụng có thể thấy được thành quả học tập của bạn. Các bạn hoàn toàn có thể đưa các project này vào CV của mình để đi xin việc.
 
 ## FAQs
 
