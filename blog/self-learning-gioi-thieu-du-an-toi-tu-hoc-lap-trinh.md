@@ -10,20 +10,47 @@ image: https://nhannguyendacoder.web.app/assets/images/self-learning-gioi-thieu-
 
 # Giới thiệu dự án tôi tự học lập trình
 
-![Giới thiệu dự án tôi tự học lập trình](../assets/images/self-learning-gioi-thieu-du-an-toi-tu-hoc-lap-trinh/toi-tu-hoc-lap-trinh.jpg)
+![Giới thiệu dự án tôi tự học lập trình][thumbnail-image]
 
-Sau khi chia sẻ câu chuyện về [quá trình tự học lập trình và tìm việc làm](https://nhannguyendacoder.web.app/blog/self-learning-toi-da-tu-hoc-lap-trinh-va-tim-duoc-viec-lam-nhu-the-nao?s=blog) của bản thân, mình nhận được nhiều đánh giá tích cực từ mọi người. Có nhiều bạn đã nhắn tin chia sẻ là các bạn ấy cũng đã hoặc đang trải qua những tình huống tương tự như mình và bài viết của mình đã động viên các bạn ấy rất nhiều. 
+Sau khi chia sẻ câu chuyện về [quá trình tự học lập trình và tìm việc làm][toidatuhoclaptrinhnhuthenaoblog] của bản thân, mình nhận được nhiều đánh giá tích cực từ mọi người. Có nhiều bạn đã nhắn tin chia sẻ là các bạn ấy cũng đã hoặc đang trải qua những tình huống tương tự như mình và bài viết của mình đã động viên các bạn ấy rất nhiều. 
 
-Mình rất vui vì bài chia sẻ câu chuyện của bản thân nhưng lại giúp ích được phần nào cho các bạn có cùng hoàn cảnh. Không muốn dừng lại ở đó, mình muốn làm điều gì đó để có thể giúp cho các bạn nhiều hơn nữa. Kể từ hôm nay mình sẽ bắt đầu dự án **Tôi tự học lập trình (TTHLT)** để hiện thực điều đó.
+Mình rất vui vì bài viết chia sẻ câu chuyện của bản thân nhưng lại giúp ích được phần nào cho các bạn có cùng hoàn cảnh. Không muốn dừng lại ở đó, mình muốn làm điều gì đó để có thể giúp cho các bạn nhiều hơn nữa. Kể từ hôm nay mình sẽ bắt đầu dự án **Tôi tự học lập trình (TTHLT)** để hiện thực điều đó.
 
-**Tôi tự học lập trình** là một dự án hướng dẫn các bạn tự học về lập trình để có thể đi làm. Mục tiêu là sau khi học xong, các bạn có thể ứng tuyển vào các vị trí **[thực tập Frontend](https://www.google.com/search?sxsrf=ALeKk02xeBEfyD40HWgrUipuZzOs-aFrbQ%3A1593012067685&ei=Y2_zXsyyKdfZrQHs_LOIAg&q=th%E1%BB%B1c+t%E1%BA%ADp+front+end&oq=th%E1%BB%B1c+t%E1%BA%ADp+front&gs_lcp=CgZwc3ktYWIQAxgAMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB46BAgjECc6BAgAEA06CAgAEAgQDRAeOgUIABCRAjoICAAQsQMQkQI6BAgAEEM6BQgAELEDOgUIABCDAToCCAA6BwgjELECECc6BAgAEAo6BwgjELACECdQ9VpYgX9g2IcBaAlwAHgHgAG7AYgBxhSSAQUxNC4xMZgBAKABAaoBB2d3cy13aXo&sclient=psy-ab)** hay **[thực tập Angular](https://www.google.com/search?q=th%E1%BB%B1c+t%E1%BA%ADp+angular&oq=th%E1%BB%B1c+t%E1%BA%ADp+angular&aqs=chrome..69i57.4311j0j4&sourceid=chrome&ie=UTF-8) (Fresher)** developer. Từ đó các bạn sẽ có một điểm tựa, kiến thức đủ để có thể tiếp tục theo đuổi đam mê lập trình, tìm hiểu các kiến thức chuyên môn sâu hơn, nâng cao hơn chứ không phải chỉ dừng lại ở mức độ cơ bản.
+**Tôi tự học lập trình** là một dự án hướng dẫn các bạn tự học về lập trình để có thể đi làm. Mục tiêu là sau khi học xong, các bạn có thể ứng tuyển vào các vị trí **[thực tập Frontend][intern-frontend-jobs]** hay **[thực tập Angular][intern-angular-jobs] (Fresher)** developer. Từ đó các bạn sẽ có một điểm tựa, kiến thức đủ để có thể tiếp tục theo đuổi đam mê lập trình, tìm hiểu các kiến thức chuyên môn sâu hơn, nâng cao hơn chứ không phải chỉ dừng lại ở mức độ cơ bản.
 
 Lưu ý:
-- Đối tượng mà dự án này hướng tới các bạn chưa biết gì về lập trình nên mình sẽ trình bày từ các kiến thức rất là cơ bản và và trình bày rất chậm.
-- Mục tiêu của khóa học là giúp các bạn có thể đi làm nhanh nhất có thể ở vị trí thực tập thôi nên mình sẽ lược bỏ một số kiến thức mà mình thấy là chưa cần thiết cho level Fresher. 
-- Sau khi các bạn có đi làm được rồi thì cũng phải học hỏi, bổ sung thêm rất nhiều kiến thức khác.
-- Mình dành thời gian cá nhân để thực hiện dự án này nên chưa xác định được khi nào sẽ hoàn thành. Mình sẽ cố gắng ra bài mới mỗi tuần. Bài học mới sẽ được thông báo trên blog và trên [fan page](https://facebook.com/NhanNguyenDaCoder). 
-- Dự án này chỉ đóng góp 10% vào thành công của các bạn, phần còn lại là do nỗ lực và cố gắng của mỗi cá nhân. 
+- Đối tượng mà dự án này hướng tới các bạn **chưa biết gì về lập trình** nên mình sẽ trình bày từ các kiến thức rất là cơ bản và và trình bày rất chậm.
+- Mục tiêu của khóa học là giúp các bạn có thể đi làm nhanh nhất có thể ở **vị trí thực tập** nên mình sẽ lược bỏ một số kiến thức mà mình thấy là chưa cần thiết cho level Fresher. 
+- Dự án này chỉ đóng góp **10%** vào thành công của các bạn, phần còn lại là do **nỗ lực luyện tập và cố gắng của mỗi cá nhân**.
+
+## Giới thiệu bản thân
+
+Mình hiện là lập trình viên toàn thời gian với khoảng 4 năm kinh nghiệm, chuyên về lập trình web và có thể code được frontend lẫn backend. Công việc hiện tại của mình thì chủ yếu làm về Angular.
+
+Mình là một lập trình viên tự học. Các kiến thức lập trình mà mình có được là do tự học và tích lũy trong quá trình làm việc thực tế. Việc tự học cũng giúp mình hiểu hơn những khó khăn, thắc mắc và sai lầm mà các các bạn tự học lập trình giống mình hay gặp phải.
+
+Profile của mình trên Linkedin: [@nhaancs][linkedin]
+
+## Tình hình thực tế của việc tự học lập trình hiện nay
+
+Theo kinh nghiệm và quan sát của mình thì các bạn tự học lập trình gặp rất là nhiều khó khăn:
+- Thứ nhất là công nghệ phát triển quá nhanh, dẫn đến các bạn không biết nên bắt đầu từ đâu và nên học những gì. 
+- Các tài liệu Tiếng Việt vẫn còn hạn chế nên sẽ rất khó cho các bạn không giỏi ngoại ngữ. 
+- Các tài liệu, khóa học thường rời rạc và thiếu liên kết, không có lộ trình rõ ràng nên các bạn không biết xác định nên học gì tiếp theo, nên học kiến thức nào trước, kiến thức nào sau. 
+- Hơn nữa, mình thấy đa số các khóa học chỉ phù hợp với những bạn đã có kiến thức cơ bản về lập trình. Đối với các bạn mới bắt đầu học sẽ không hiểu được. Đôi khi người hướng dẫn dùng MacOS còn người học thì dùng Windows đã là một khó khăn rồi đối với người mới rồi, hay việc xuất hiện quá nhiều thuật ngữ chuyên môn nâng cao mà không có giải thích cũng làm cho người mới khó hiểu.
+
+## Cách tiếp cận của dự án
+
+Dự án hướng dẫn các bạn theo hướng lập trình web vì đây là lĩnh vực đang có nhu cầu cao, thu nhập hấp dẫn và tương đối dễ học so với các lĩnh vực khác như lập trình di động, lập trình nhúng, bảo mật,... Để học lập trình web các bạn chỉ cần có máy tính mà không cần mua sắm thêm các thiết bị như điện thoại, phần mềm, hay phần cứng khác.
+
+Dưới đây là một số đặc điểm của dự án:
+- Trình bày các kiến thức cơ bản nhất và cần thiết nhất để người học có một nền tảng đủ để học các kiến thức nâng cao hơn. 
+- Đơn giản hóa các kiến thức chuyên môn trừu tượng khó hiểu, đưa ra các ứng dụng trong thực tế để phù hợp với những người mới học lập trình.
+- Cung cấp các khóa học theo hệ thống từ căn bản với độ khó tăng dần để người học dễ tiếp thu và không còn cần phải lo lắng nên học những gì.
+- Hướng dẫn các công cụ dùng thực tế trong doanh nghiệp để các bạn có thể băt kịp nhanh nhất với môi trường làm việc thực tế.
+- Hướng dẫn dựa theo các project thực tế, sau khi hoàn thành dự án các bạn sẽ có một số project để đưa vào CV xin việc. 
+
+Các điểm trên sẽ giúp người học nắm được kiến thức cần thiết và có thể đi làm trong thời gian sớm nhất. Từ đó các bạn sẽ có môi trường thực tế để học các kiến thức chuyên sâu hơn.
 
 ## Nội dung dự án
 
@@ -37,7 +64,7 @@ Thông tin trong khóa học này được đúc kết từ các nghiên cứu k
 
 Khóa học này không nói về các vấn đề kỹ thuật, không có code nhưng là quá học quan trọng nhất trong cả dự án. Kiến thức trong khóa học không chỉ áp dụng cho học lập trình thôi. Bạn có thể áp dụng kiến thức học được để áp dụng học bất cứ kỹ năng nào, hay áp dụng cho việc học trên trường vẫn được.
 
-> [Xem thông tin chi tiết khóa học](https://nhannguyendacoder.web.app/blog/self-learning-huong-dan-tu-hoc-lap-trinh?s=blog)
+> [Xem thông tin chi tiết khóa học][course-huong-dan-tu-hoc-lap-trinh]
 
 ### 2. Nhập môn lập trình với Javascript
 
@@ -115,16 +142,37 @@ Mình sẽ hướng dẫn các bạn đưa tất cả các project trên lên m�
 
 ## FAQs
 
-### 1. Các khóa học dùng hệ điều hành nào?
+### 1. Mình dùng hệ điều hành Windows có học được không?
 
-Các khóa học chủ yếu dùng Windows. Cuối dự án mình có giới thiệu cho các bạn về Ubuntu để làm quen với môi trường làm việc thực tế của các doanh nghiệp.
+Nếu bạn dùng Windows thì vẫn hoàn toàn có thể học được. Các khóa học chủ yếu dùng Windows. Cuối dự án mình có giới thiệu cho các bạn về Ubuntu để làm quen với môi trường làm việc thực tế của các doanh nghiệp.
 
-### 2. Dự án có dạy code backend không?
+### 2. Dự án có dạy lập trình backend không?
 
-Dự án không hướng dẫn code backend. Đối với các project có phần backend thì các bạn sẽ được cung cấp code backend kèm hướng dẫn chạy code để làm phần frontend.
+Dự án không hướng dẫn lập trình backend. Đối với các project có phần backend thì các bạn sẽ được cung cấp code backend kèm hướng dẫn chạy code để làm phần frontend. Nếu bạn muốn học về backend thì sau khi hoàn thành dự án này các bạn sẽ có những nền tảng để theo học các khóa học về backend.
 
 ### 3. Tự học khoảng bao lâu thì có thể đi làm?
 
 Thời gian từ khi bắt đầu tự học đến khi có thể đi làm thường từ 6 tháng đến 1 năm nếu học liên tục.
 
+### 4. Khi nào thì dự án hoàn thành?
 
+Đây là dự án cá nhân của mình bên cạnh công việc ở công ty nên chưa xác định được khi nào sẽ hoàn thành. Mình sẽ cố gắng ra bài mới mỗi tuần. Bài học mới sẽ được thông báo trên blog và trên [fanpage][fanpage]. 
+
+### 5. Sau khi hoàn thành dự án này tôi có cần phải học thêm gì không?
+
+Dự án này có hai mục đích chính: 
+- Cung cấp các kiến thức cơ bản nhất để từ đó các bạn có nền tảng để tiếp thu các kiến thức nâng cao hơn. 
+- Cung cấp các kiến thức vừa đủ để các bạn có thể đi thực tập sớm nhất, từ đó các bạn có cơ hội học thêm về chuyên môn trong môi trường thực tế.
+
+Vì vậy các bạn chỉ nên xem đây là **một nơi để bắt đầu** hành trình tìm hiểu về lập trình của mình. Dù cho sau dự án này, các bạn đã đi làm hay chưa thì cũng cần phải bổ sung thên nhiều kiến thức khác (mình sẽ chia sẻ về hướng đi tiếp theo ở cuối dự án). 
+
+
+[toidatuhoclaptrinhnhuthenaoblog]: https://nhannguyendacoder.web.app/blog/self-learning-toi-da-tu-hoc-lap-trinh-va-tim-duoc-viec-lam-nhu-the-nao?s=blog
+[course-huong-dan-tu-hoc-lap-trinh]: https://nhannguyendacoder.web.app/blog/self-learning-huong-dan-tu-hoc-lap-trinh?s=blog
+
+[fanpage]: https://facebook.com/NhanNguyenDaCoder
+[linkedin]: https://www.linkedin.com/in/nhaancs
+[intern-frontend-jobs]: https://www.google.com/search?sxsrf=ALeKk02xeBEfyD40HWgrUipuZzOs-aFrbQ%3A1593012067685&ei=Y2_zXsyyKdfZrQHs_LOIAg&q=th%E1%BB%B1c+t%E1%BA%ADp+front+end&oq=th%E1%BB%B1c+t%E1%BA%ADp+front&gs_lcp=CgZwc3ktYWIQAxgAMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB46BAgjECc6BAgAEA06CAgAEAgQDRAeOgUIABCRAjoICAAQsQMQkQI6BAgAEEM6BQgAELEDOgUIABCDAToCCAA6BwgjELECECc6BAgAEAo6BwgjELACECdQ9VpYgX9g2IcBaAlwAHgHgAG7AYgBxhSSAQUxNC4xMZgBAKABAaoBB2d3cy13aXo&sclient=psy-ab
+[intern-angular-jobs]: https://www.google.com/search?q=th%E1%BB%B1c+t%E1%BA%ADp+angular&oq=th%E1%BB%B1c+t%E1%BA%ADp+angular&aqs=chrome..69i57.4311j0j4&sourceid=chrome&ie=UTF-8
+
+[thumbnail-image]: ../assets/images/self-learning-gioi-thieu-du-an-toi-tu-hoc-lap-trinh/toi-tu-hoc-lap-trinh.jpg
