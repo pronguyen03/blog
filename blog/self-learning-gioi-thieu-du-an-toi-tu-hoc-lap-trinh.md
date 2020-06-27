@@ -47,7 +47,7 @@ Dưới đây là một số đặc điểm của dự án:
 - Trình bày các kiến thức cơ bản nhất và cần thiết nhất để người học có một nền tảng đủ để học các kiến thức nâng cao hơn. 
 - Đơn giản hóa các kiến thức chuyên môn trừu tượng khó hiểu, đưa ra các ứng dụng trong thực tế để phù hợp với những người mới học lập trình.
 - Cung cấp các khóa học theo hệ thống từ căn bản với độ khó tăng dần để người học dễ tiếp thu và không còn cần phải lo lắng nên học những gì.
-- Hướng dẫn các công cụ dùng thực tế trong doanh nghiệp để các bạn có thể băt kịp nhanh nhất với môi trường làm việc thực tế.
+- Hướng dẫn các công cụ dùng thực tế trong doanh nghiệp để các bạn có thể bắt kịp nhanh nhất với môi trường làm việc thực tế.
 - Hướng dẫn dựa theo các project thực tế, sau khi hoàn thành dự án các bạn sẽ có một số project để đưa vào CV xin việc. 
 
 Các điểm trên sẽ giúp người học nắm được kiến thức cần thiết và có thể đi làm trong thời gian sớm nhất. Từ đó các bạn sẽ có môi trường thực tế để học các kiến thức chuyên sâu hơn.
