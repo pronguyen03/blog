@@ -52,94 +52,6 @@ Dưới đây là một số đặc điểm của dự án:
 
 Các điểm trên sẽ giúp người học nắm được kiến thức cần thiết và có thể đi làm trong thời gian sớm nhất. Từ đó các bạn sẽ có môi trường thực tế để học các kiến thức chuyên sâu hơn.
 
-## Nội dung dự án
-
-Dự án này bao gồm các khóa học được tổ chức có hệ thống theo thứ tự như sau: 
-
-### 1. Hướng dẫn tự học lập trình
-
-Điểm đặc biệt của dự án này là trước khi hướng dẫn các bạn bất kỳ nội dung gì, mình sẽ hướng dẫn các bạn cách học sao cho đúng trước. Mình thấy các khóa học khác hay trong trường thì các bạn ít được **học về cách học**. Trong khi khi đây là nội dung rất quan trọng đối với người học và đa số mọi người (kể cả mình trong quá khứ) đều có các thói quen học tập không khoa học. Học sai cách sẽ ảnh hưởng xấu đến kết quả học, làm người học chán nản và dễ bỏ cuộc.
-
-Thông tin trong khóa học này được đúc kết từ các nghiên cứu khoa học được công nhận trên thế giới. Bên cạnh đó mình cũng sẽ chia sẻ kinh nghiệm tự học lập trình của chính bản thân mình.
-
-Khóa học này không nói về các vấn đề kỹ thuật, không có code nhưng là quá học quan trọng nhất trong cả dự án. Kiến thức trong khóa học không chỉ áp dụng cho học lập trình thôi. Bạn có thể áp dụng kiến thức học được để áp dụng học bất cứ kỹ năng nào, hay áp dụng cho việc học trên trường vẫn được.
-
-> [Xem thông tin chi tiết khóa học][course-huong-dan-tu-hoc-lap-trinh]
-
-### 2. Nhập môn lập trình với Javascript
-
-Nếu bạn mới bắt đầu học lập trình thì trong khóa học này bạn sẽ viết những dòng code đầu tiên và thấy nó hoạt động như thế nào.
-
-Mình biết là có nhiều bạn sẽ nghe nói là Javascript không tốt, như thế này, thế kia, nên học ngôn ngữ ABC tốt hơn. Theo mình thì các bạn không nên quan tâm tới vấn đề đó. Chúng ta cần một công cụ để học **tư duy lập trình**, học Javascript hay bất cứ ngôn ngữ nào khác cũng như nhau. Khi có tư duy lập trình rồi thì bạn học các ngôn ngữ khá rất nhanh, vì các ngôn ngữ lập trình đa số đều có các cấu trúc tương tự nhau. Và nếu có kinh nghiệm đủ rộng thì các bạn sẽ biết được là mỗi ngôn ngữ đều có điểm mạnh, điểm yếu riêng, và sẽ phù hợp cho từng loại dự án khác nhau, không có ngôn ngữ nào là hoàn hảo cả.
-
-Mình chọn Javascript để cho các bạn tiếp cận với các kiến thức cơ bản trong lập trình vì hiện tại đây là ngôn ngữ khá phổ biến, Javascript có thể làm web front end (React, Angular), mobile (React Native), back end (Nodejs). 
-
-> Xem thông tin chi tiết khóa học (đang cập nhật)
-
-### 3. HTML5, CSS, Javascript
-
-Có thể nói HTML5, CSS, Javascript là các công nghệ nền tảng của web. Trước khi học bất cứ framework nào thì các bạn phải nắm vững các nền tảng này. 
-
-Sau khi học khóa học này các bạn có thể tự xây dựng một website tĩnh như trang landing page để quảng bá sản phẩm hay tự làm một CV cá nhân với HTML và CSS. 
-
-> Xem thông tin chi tiết khóa học (đang cập nhật)
-
-### 4. Bootstrap 4
-
-Bootstrap là một công cụ rất mạnh để hỗ trợ việc tùy chỉnh giao diện HTML, CSS được nhanh hơn. 
-
-Bootstrap cung cấp các class tiện dụng cho lập trình viên. Thay vì phải căn chỉnh CSS cho từng button, input, layout thì bạn chỉ cần thêm vào thẻ HTML các class tương ứng là sẽ có ngay giao diện nhìn khá ổn.
-
-Hiện tại đa số các công ty đều dùng Bootstrap. Khi có kiến thức về Bootstrap bạn cũng có thể tự nghiên cứu các framework tương tự khác.
-
-Mình sẽ giới thiệu các thành phần cơ bản, hay được sử dụng của Bootstrap trong khóa học này.
-
-> Xem thông tin chi tiết khóa học (đang cập nhật)
-
-### 5. Angular, Typescript, Reactive Programming
-
-Hiện nay lập trình front end đã được nâng lên một tầm cao mới. Người ta ít dùng HTML, CSS, Js hay Bootstrap thuần mà dùng các framework như React, Vue hay Angular để lập trình frontend. 
-
-Mình chọn Angular để hướng dẫn các bạn vì mình có kinh nghiệm nhiều nhất với framework này, công việc hiện tại của mình cũng làm về Angular. Angular được xây dựng bởi Google, có nhiều công cụ hỗ trợ, cộng đồng Angular Việt Nam cũng hoạt động khá tích cực.
-
-Trong khóa học này các bạn sẽ học các thành phần cơ bản về Angular, và áp dụng để làm các project đơn giản.
-
-Bên cạnh Angular, các bạn cũng sẽ được học các kiến thức liên quan như Typescript và Reactive Programming.
-
-> Xem thông tin chi tiết khóa học (đang cập nhật)
-
-### 6. Git, Github
-
-Đa số các công ty lập trình đều dùng Git để quản lý source code. Github là nơi để lưu source code của dự án. Có thể sử dụng Git là một lợi thế của bạn trong quá trình tìm việc.
-
-Trong khóa học này các bạn sẽ tìm hiểu các hoạt động của Git và các lệnh Git thông dụng nhất.
-
-> Xem thông tin chi tiết khóa học (đang cập nhật)
-
-### 7. Làm quen với hệ điều hành Ubuntu
-
-Hầu hết các công ty lập trình đều sử dụng các hệ điều hành nhân Linux như Ubuntu, MacOS. Thông thường mọi người sẽ dùng Ubuntu, khi dùng Ubuntu rồi thì chuyển qua các hệ điều hành khác cũng nhanh thôi vì đa số các câu lệnh là như nhau. Biết cách sử dụng Ubuntu cũng là một ưu thế cho bạn trong khi tìm việc.
-
-Khóa học này sẽ hướng dẫn các bạn tổng quan về Ubuntu và những lệnh thường dùng nhất.
-
-> Xem thông tin chi tiết khóa học (đang cập nhật)
-
-### 8. Kỹ năng mềm cần thiết cho fresher developer 
-
-Ngoài kiến thức chuyên môn thì kỹ năng mềm cũng là một phần rất quan trọng. Trong khóa học này mình sẽ chia sẻ các kỹ năng mềm cần thiết cho một fresher developer như cách chọn công ty, cách chuẩn bị CV, chuẩn bị phỏng vấn như thế nào, cách giải quyết khó khăn trong thời gian thử việc,...
-
-> Xem thông tin chi tiết khóa học (đang cập nhật)
-
-### Project
-
-Trong quá trình học, chúng ta sẽ hoàn thiện dần 4 project: 
-- Landing page: Trang quảng bá sản phẩm.
-- CV cá nhân: Thiết kế CV với HTML, CSS, Javascript và đưa lên Github page để nhà tuyển dụng có thể xem trực tiếp trên web.
-- Todo list: Ứng dụng quản lý công việc hằng ngày.
-- Blog: Blog cá nhân đơn giản, các bạn có thể dùng để viết bài chia sẻ kiến thức.
-
-Mình sẽ hướng dẫn các bạn đưa tất cả các project trên lên mạng để mọi người, đặc biệt là nhà tuyển dụng có thể thấy được thành quả học tập của bạn. Các bạn hoàn toàn có thể đưa các project này vào CV của mình để đi xin việc.
-
 ## FAQs
 
 ### 1. Mình dùng hệ điều hành Windows có học được không?
@@ -148,7 +60,7 @@ Nếu bạn dùng Windows thì vẫn hoàn toàn có thể học được. Các 
 
 ### 2. Dự án có dạy lập trình backend không?
 
-Dự án không hướng dẫn lập trình backend. Đối với các project có phần backend thì các bạn sẽ được cung cấp code backend kèm hướng dẫn chạy code để làm phần frontend. Nếu bạn muốn học về backend thì sau khi hoàn thành dự án này các bạn sẽ có những nền tảng để theo học các khóa học về backend.
+Dự án không hướng dẫn lập trình backend. Đối với các các phần cần backend thì các bạn sẽ được cung cấp code backend kèm hướng dẫn chạy code để làm phần frontend. Nếu bạn muốn học về backend thì sau khi hoàn thành dự án này các bạn cũng sẽ có những nền tảng để theo học các khóa học về backend.
 
 ### 3. Tự học khoảng bao lâu thì có thể đi làm?
 
@@ -166,9 +78,103 @@ Dự án này có hai mục đích chính:
 
 Vì vậy các bạn chỉ nên xem đây là **một nơi để bắt đầu** hành trình tìm hiểu về lập trình của mình. Dù cho sau dự án này, các bạn đã đi làm hay chưa thì cũng cần phải bổ sung thên nhiều kiến thức khác (mình sẽ chia sẻ về hướng đi tiếp theo ở cuối dự án). 
 
+## Nội dung dự án
+
+### Project
+
+Trong quá trình học, chúng ta sẽ hoàn thiện dần 4 project: 
+- Landing page: Trang quảng bá sản phẩm.
+- CV cá nhân: Thiết kế CV với HTML, CSS, Javascript và đưa lên Github page để nhà tuyển dụng có thể Trực tiếp trên web.
+- Todo list: Ứng dụng quản lý công việc hằng ngày.
+
+Mình sẽ hướng dẫn các bạn đưa tất cả các project trên lên mạng để mọi người, đặc biệt là nhà tuyển dụng có thể thấy được thành quả học tập của bạn. Các bạn hoàn toàn có thể đưa các project này vào CV của mình để đi xin việc.
+
+**Dự án này bao gồm các khóa học được tổ chức có hệ thống theo thứ tự như sau:** 
+
+### 1. Hướng dẫn tự học lập trình
+
+Điểm đặc biệt của dự án này là trước khi hướng dẫn các bạn bất kỳ nội dung gì, mình sẽ hướng dẫn các bạn cách học sao cho đúng trước. Mình thấy các khóa học khác hay trong trường thì các bạn ít được **học về cách học**. Trong khi khi đây là nội dung rất quan trọng đối với người học và đa số mọi người (kể cả mình trong quá khứ) đều có các thói quen học tập không khoa học. Học sai cách sẽ ảnh hưởng xấu đến kết quả học, làm người học chán nản và dễ bỏ cuộc.
+
+Thông tin trong khóa học này được đúc kết từ các nghiên cứu khoa học được công nhận trên thế giới. Bên cạnh đó mình cũng sẽ chia sẻ kinh nghiệm tự học lập trình của chính bản thân mình.
+
+Khóa học này không nói về các vấn đề kỹ thuật, không có code nhưng là quá học quan trọng nhất trong cả dự án. Kiến thức trong khóa học không chỉ áp dụng cho học lập trình thôi. Bạn có thể áp dụng kiến thức học được để áp dụng học bất cứ kỹ năng nào, hay áp dụng cho việc học trên trường vẫn được.
+
+> **Thông tin chi tiết khóa học**
+
+> 1. [Áp dụng các nghiên cứu về việc học và trí nhớ][self-learning-1]
+
+> 2. Quản lý thời gian hiệu quả và vượt qua căng thẳng (đang cập nhật)
+
+> 3. Các bước xây dựng kế hoạch học lập trình hiệu quả (đang cập nhật)
+
+### 2. Nhập môn lập trình với Javascript
+
+Nếu bạn mới bắt đầu học lập trình thì trong khóa học này bạn sẽ viết những dòng code đầu tiên và thấy nó hoạt động như thế nào.
+
+Mình biết là có nhiều bạn sẽ nghe nói là Javascript không tốt, như thế này, thế kia, nên học ngôn ngữ ABC tốt hơn. Theo mình thì các bạn không nên quan tâm tới vấn đề đó. Chúng ta cần một công cụ để học **tư duy lập trình**, học Javascript hay bất cứ ngôn ngữ nào khác cũng như nhau. Khi có tư duy lập trình rồi thì bạn học các ngôn ngữ khá rất nhanh, vì các ngôn ngữ lập trình đa số đều có các cấu trúc tương tự nhau. Và nếu có kinh nghiệm đủ rộng thì các bạn sẽ biết được là mỗi ngôn ngữ đều có điểm mạnh, điểm yếu riêng, và sẽ phù hợp cho từng loại dự án khác nhau, không có ngôn ngữ nào là hoàn hảo cả.
+
+Mình chọn Javascript để cho các bạn tiếp cận với các kiến thức cơ bản trong lập trình vì hiện tại đây là ngôn ngữ khá phổ biến, Javascript có thể làm web front end (React, Angular), mobile (React Native), back end (Nodejs). 
+
+> Thông tin chi tiết khóa học (đang cập nhật)
+
+### 3. HTML5, CSS, Javascript
+
+Có thể nói HTML5, CSS, Javascript là các công nghệ nền tảng của web. Trước khi học bất cứ framework nào thì các bạn phải nắm vững các nền tảng này. 
+
+Sau khi học khóa học này các bạn có thể tự xây dựng một website tĩnh như trang landing page để quảng bá sản phẩm hay tự làm một CV cá nhân với HTML và CSS. 
+
+> Thông tin chi tiết khóa học (đang cập nhật)
+
+### 4. Bootstrap 4
+
+Bootstrap là một công cụ rất mạnh để hỗ trợ việc tùy chỉnh giao diện HTML, CSS được nhanh hơn. 
+
+Bootstrap cung cấp các class tiện dụng cho lập trình viên. Thay vì phải căn chỉnh CSS cho từng button, input, layout thì bạn chỉ cần thêm vào thẻ HTML các class tương ứng là sẽ có ngay giao diện nhìn khá ổn.
+
+Hiện tại đa số các công ty đều dùng Bootstrap. Khi có kiến thức về Bootstrap bạn cũng có thể tự nghiên cứu các framework tương tự khác.
+
+Mình sẽ giới thiệu các thành phần cơ bản, hay được sử dụng của Bootstrap trong khóa học này.
+
+> Thông tin chi tiết khóa học (đang cập nhật)
+
+### 5. Angular, Typescript, Reactive Programming
+
+Hiện nay lập trình front end đã được nâng lên một tầm cao mới. Người ta ít dùng HTML, CSS, Js hay Bootstrap thuần mà dùng các framework như React, Vue hay Angular để lập trình frontend. 
+
+Mình chọn Angular để hướng dẫn các bạn vì mình có kinh nghiệm nhiều nhất với framework này, công việc hiện tại của mình cũng làm về Angular. Angular được xây dựng bởi Google, có nhiều công cụ hỗ trợ, cộng đồng Angular Việt Nam cũng hoạt động khá tích cực.
+
+Trong khóa học này các bạn sẽ học các thành phần cơ bản về Angular, và áp dụng để làm các project đơn giản.
+
+Bên cạnh Angular, các bạn cũng sẽ được học các kiến thức liên quan như Typescript và Reactive Programming.
+
+> Thông tin chi tiết khóa học (đang cập nhật)
+
+### 6. Git, Github
+
+Đa số các công ty lập trình đều dùng Git để quản lý source code. Github là nơi để lưu source code của dự án. Có thể sử dụng Git là một lợi thế của bạn trong quá trình tìm việc.
+
+Trong khóa học này các bạn sẽ tìm hiểu các hoạt động của Git và các lệnh Git thông dụng nhất.
+
+> Thông tin chi tiết khóa học (đang cập nhật)
+
+### 7. Làm quen với hệ điều hành Ubuntu
+
+Hầu hết các công ty lập trình đều sử dụng các hệ điều hành nhân Linux như Ubuntu, MacOS. Thông thường mọi người sẽ dùng Ubuntu, khi dùng Ubuntu rồi thì chuyển qua các hệ điều hành khác cũng nhanh thôi vì đa số các câu lệnh là như nhau. Biết cách sử dụng Ubuntu cũng là một ưu thế cho bạn trong khi tìm việc.
+
+Khóa học này sẽ hướng dẫn các bạn tổng quan về Ubuntu và những lệnh thường dùng nhất.
+
+> Thông tin chi tiết khóa học (đang cập nhật)
+
+### 8. Kỹ năng mềm cần thiết cho fresher developer 
+
+Ngoài kiến thức chuyên môn thì kỹ năng mềm cũng là một phần rất quan trọng. Trong khóa học này mình sẽ chia sẻ các kỹ năng mềm cần thiết cho một fresher developer như cách chọn công ty, cách chuẩn bị CV, chuẩn bị phỏng vấn như thế nào, cách giải quyết khó khăn trong thời gian thử việc,...
+
+> Thông tin chi tiết khóa học (đang cập nhật)
+
 
 [toidatuhoclaptrinhnhuthenaoblog]: https://nhannguyendacoder.web.app/blog/self-learning-toi-da-tu-hoc-lap-trinh-va-tim-duoc-viec-lam-nhu-the-nao?s=blog
-[course-huong-dan-tu-hoc-lap-trinh]: https://nhannguyendacoder.web.app/blog/self-learning-huong-dan-tu-hoc-lap-trinh?s=blog
+
+[self-learning-1]: https://nhannguyendacoder.web.app/blog/self-learning-ap-dung-cac-nghien-cuu-ve-viec-hoc-va-tri-nho?s=blog
 
 [fanpage]: https://facebook.com/NhanNguyenDaCoder
 [linkedin]: https://www.linkedin.com/in/nhaancs

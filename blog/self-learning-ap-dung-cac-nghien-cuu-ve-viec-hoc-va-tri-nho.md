@@ -12,7 +12,7 @@ image: https://nhannguyendacoder.web.app/assets/images/self-learning-ap-dung-cac
 
 ![Hướng dẫn tự học lập trình][thumbnail]
 
-> Đây là một bài học trong khóa học [Hướng dẫn tự học lập trình][huong-dan-tu-hoc-lap-trinh] thuộc dự án [Tôi tự học lập trình][tthlt]
+> Đây là một bài học trong khóa học Hướng dẫn tự học lập trình thuộc dự án [Tôi tự học lập trình][tthlt]
 
 ## Tổng kết
 
@@ -20,7 +20,6 @@ image: https://nhannguyendacoder.web.app/assets/images/self-learning-ap-dung-cac
 
 ## Bài tập áp dụng
 
-[huong-dan-tu-hoc-lap-trinh]: https://nhannguyendacoder.web.app/blog/self-learning-huong-dan-tu-hoc-lap-trinh?s=blog
 [tthlt]: https://nhannguyendacoder.web.app/blog/self-learning-gioi-thieu-du-an-toi-tu-hoc-lap-trinh?s=blog
 [thumbnail]: ../assets/images/self-learning-ap-dung-cac-nghien-cuu-ve-viec-hoc-va-tri-nho/nghien-cuu-viec-hoc.jpg
 
