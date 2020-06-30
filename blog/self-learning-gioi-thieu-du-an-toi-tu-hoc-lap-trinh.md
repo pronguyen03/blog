@@ -1,5 +1,5 @@
 ---
-title: Giới thiệu dự án tôi tự học lập trình
+title: Giới thiệu dự án Tôi tự học lập trình
 description: Tôi tự học lập trình là dự án hướng dẫn các bạn tự học lập trình để có thể đi làm. Sau khi học xong, các bạn có thể ứng tuyển vào các vị trí Fresher Frontend hay Fresher Angular developer.
 published: true
 keywords: tu hoc lap trinh, lap trinh, tu hoc Angular, lap trinh angular, html, css, javascript, Fresher Frontend, Fresher angular
@@ -8,9 +8,9 @@ date: 2020-06-25
 image: https://nhannguyendacoder.web.app/assets/images/self-learning-gioi-thieu-du-an-toi-tu-hoc-lap-trinh/toi-tu-hoc-lap-trinh.jpg
 ---
 
-# Giới thiệu dự án tôi tự học lập trình
+# Giới thiệu dự án Tôi tự học lập trình
 
-![Giới thiệu dự án tôi tự học lập trình][thumbnail-image]
+![Giới thiệu dự án tôi tự học lập trình][post-image]
 
 Sau khi chia sẻ câu chuyện về [quá trình tự học lập trình và tìm việc làm][toidatuhoclaptrinhnhuthenaoblog] của bản thân, mình nhận được nhiều đánh giá tích cực từ mọi người. Có nhiều bạn đã nhắn tin chia sẻ là các bạn ấy cũng đã hoặc đang trải qua những tình huống tương tự như mình và bài viết của mình đã động viên các bạn ấy rất nhiều. 
 
@@ -95,7 +95,7 @@ Mình biết là có nhiều bạn sẽ nghe nói là Javascript không tốt, n
 
 Mình chọn Javascript để cho các bạn tiếp cận với các kiến thức cơ bản trong lập trình vì hiện tại đây là ngôn ngữ khá phổ biến, Javascript có thể làm được nhiều thứ từ web Frontend (React, Angular, Vue), ứng dụng mobile (React Native, Ionic, NativeScript), hay code Backend (Nodejs - Express, Nest). 
 
-> Thông tin chi tiết khóa học (đang cập nhật)
+> **Thông tin chi tiết khóa học (đang cập nhật)**
 
 ### 3. HTML5, CSS, Javascript
 
@@ -103,7 +103,7 @@ Có thể nói HTML5, CSS, Javascript là các công nghệ nền tảng của w
 
 Sau khi học khóa học này các bạn có thể tự xây dựng một website tĩnh như trang landing page để quảng bá sản phẩm hay tự làm một CV cá nhân với HTML và CSS. 
 
-> Thông tin chi tiết khóa học (đang cập nhật)
+> **Thông tin chi tiết khóa học (đang cập nhật)**
 
 ### 4. Bootstrap 4
 
@@ -113,7 +113,7 @@ Bootstrap cung cấp các class tiện dụng cho lập trình viên. Thay vì p
 
 Hiện tại đa số các công ty đều dùng Bootstrap. Khi có kiến thức về Bootstrap bạn cũng có thể tự nghiên cứu các thư viện về giao diện tương tự khác.
 
-> Thông tin chi tiết khóa học (đang cập nhật)
+> **Thông tin chi tiết khóa học (đang cập nhật)**
 
 ### 5. Angular, Typescript, Reactive Programming
 
@@ -125,7 +125,7 @@ Trong khóa học này các bạn sẽ học các thành phần cơ bản về A
 
 Bên cạnh Angular, các bạn cũng sẽ được học các kiến thức liên quan như Typescript và Reactive Programming.
 
-> Thông tin chi tiết khóa học (đang cập nhật)
+> **Thông tin chi tiết khóa học (đang cập nhật)**
 
 ### 6. Git, Github
 
@@ -133,7 +133,7 @@ Bên cạnh Angular, các bạn cũng sẽ được học các kiến thức li�
 
 Trong khóa học này các bạn sẽ tìm hiểu các hoạt động của Git và các lệnh Git thông dụng nhất.
 
-> Thông tin chi tiết khóa học (đang cập nhật)
+> **Thông tin chi tiết khóa học (đang cập nhật)**
 
 ### 7. Làm quen với hệ điều hành Ubuntu
 
@@ -141,7 +141,7 @@ Hầu hết các công ty lập trình đều sử dụng các hệ điều hàn
 
 Khóa học này sẽ hướng dẫn các bạn tổng quan về Ubuntu và những lệnh thường dùng nhất.
 
-> Thông tin chi tiết khóa học (đang cập nhật)
+> **Thông tin chi tiết khóa học (đang cập nhật)**
 
 ### 8. Kỹ năng mềm cần thiết cho Fresher developer 
 
@@ -149,7 +149,7 @@ Không chỉ riêng ngành Công nghệ thông tin mà trong các ngành nghề 
 
 Trong khóa học này mình sẽ chia sẻ các kỹ năng mềm cần thiết cho một Fresher developer như cách chọn công ty, cách chuẩn bị CV, chuẩn bị phỏng vấn như thế nào, cách giải quyết khó khăn trong thời gian thử việc,...
 
-> Thông tin chi tiết khóa học (đang cập nhật)
+> **Thông tin chi tiết khóa học (đang cập nhật)**
 
 ## III. FAQs
 
@@ -185,4 +185,4 @@ Vì vậy các bạn chỉ nên xem đây là **một nơi để bắt đầu** 
 [intern-Frontend-jobs]: https://www.google.com/search?sxsrf=ALeKk02xeBEfyD40HWgrUipuZzOs-aFrbQ%3A1593012067685&ei=Y2_zXsyyKdfZrQHs_LOIAg&q=th%E1%BB%B1c+t%E1%BA%ADp+front+end&oq=th%E1%BB%B1c+t%E1%BA%ADp+front&gs_lcp=CgZwc3ktYWIQAxgAMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB46BAgjECc6BAgAEA06CAgAEAgQDRAeOgUIABCRAjoICAAQsQMQkQI6BAgAEEM6BQgAELEDOgUIABCDAToCCAA6BwgjELECECc6BAgAEAo6BwgjELACECdQ9VpYgX9g2IcBaAlwAHgHgAG7AYgBxhSSAQUxNC4xMZgBAKABAaoBB2d3cy13aXo&sclient=psy-ab
 [intern-angular-jobs]: https://www.google.com/search?q=th%E1%BB%B1c+t%E1%BA%ADp+angular&oq=th%E1%BB%B1c+t%E1%BA%ADp+angular&aqs=chrome..69i57.4311j0j4&sourceid=chrome&ie=UTF-8
 
-[thumbnail-image]: ../assets/images/self-learning-gioi-thieu-du-an-toi-tu-hoc-lap-trinh/toi-tu-hoc-lap-trinh.jpg
+[post-image]: ../assets/images/self-learning-gioi-thieu-du-an-toi-tu-hoc-lap-trinh/toi-tu-hoc-lap-trinh-cover.jpg
