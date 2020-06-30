@@ -81,7 +81,7 @@ Khóa học này không nói về các vấn đề kỹ thuật, không có code
 
 > **Thông tin chi tiết khóa học**
 
-> 1. [Áp dụng các nghiên cứu về việc học và trí nhớ][self-learning-1]
+> 1. Áp dụng các nghiên cứu về việc học và trí nhớ (đang cập nhật)
 
 > 2. Quản lý thời gian hiệu quả và vượt qua căng thẳng (đang cập nhật)
 
