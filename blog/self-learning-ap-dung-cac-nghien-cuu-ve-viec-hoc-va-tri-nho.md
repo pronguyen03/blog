@@ -4,7 +4,7 @@ description:
 published: true
 keywords: tu hoc lap trinh, lap trinh
 categories: self-learning
-date: 2020-06-27
+date: 2020-06-30
 image: https://nhannguyendacoder.web.app/assets/images/self-learning-ap-dung-cac-nghien-cuu-ve-viec-hoc-va-tri-nho/nghien-cuu-viec-hoc.jpg
 ---
 
