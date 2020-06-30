@@ -25,13 +25,17 @@
     "@scullyio/ng-lib": "latest",
     "@scullyio/scully": "latest",
     "rxjs": "~6.5.4",
+    "scully-plugin-disable-angular": "^4.0.2",
+    "scully-plugin-minify-html": "^3.1.2",
     "tslib": "^1.10.0",
+    "xmlbuilder": "^15.1.1",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.6",
     "@angular/cli": "~9.1.6",
     "@angular/compiler-cli": "~9.1.7",
+    "@gammastream/scully-plugin-sitemap": "^1.0.0",
     "@types/node": "^12.11.1",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
