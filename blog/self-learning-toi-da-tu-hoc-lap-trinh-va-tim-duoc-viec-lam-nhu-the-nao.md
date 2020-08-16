@@ -5,7 +5,7 @@ published: true
 keywords: tu hoc lap trinh, lap trinh
 categories: self-learning
 date: 2020-06-14
-image: https://nhannguyendacoder.web.app/assets/images/nhan-nguyen-da-coder.jpg
+image: https://nhannguyendacoder.com/assets/images/nhan-nguyen-da-coder.jpg
 ---
 
 # Tôi đã tự học lập trình và tìm được việc làm như thế nào

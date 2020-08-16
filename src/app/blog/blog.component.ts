@@ -50,7 +50,7 @@ export class BlogComponent implements OnInit {
 
     let categories = (route.categories as string)
       .split(',')
-      .filter(c => c) // remove all blanks
+      .filter(c => c.trim()) // remove all blanks
 
     categories.forEach(c => this.routes$s.push(this.routeService.getRoutes(c)))
   }

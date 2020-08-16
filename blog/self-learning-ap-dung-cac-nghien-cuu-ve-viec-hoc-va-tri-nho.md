@@ -5,7 +5,7 @@ published: false
 keywords: 'tu hoc lap trinh, lap trinh'
 categories: self-learning
 date: 2020-06-30T00:00:00.000Z
-image: 'https://nhannguyendacoder.web.app/assets/images/self-learning-ap-dung-cac-nghien-cuu-ve-viec-hoc-va-tri-nho/nghien-cuu-viec-hoc.jpg'
+image: 'https://nhannguyendacoder.com/assets/images/self-learning-ap-dung-cac-nghien-cuu-ve-viec-hoc-va-tri-nho/nghien-cuu-viec-hoc.jpg'
 slugs:
     - ___UNPUBLISHED___kc1rfsoi_ja96I8zB0JLmZLVRvqNLVKyJDyi7eGjI
 
@@ -47,7 +47,7 @@ slugs:
 
 ## IV. Bài tập áp dụng
 
-[tthlt]: https://nhannguyendacoder.web.app/blog/self-learning-gioi-thieu-du-an-toi-tu-hoc-lap-trinh?s=blog
+[tthlt]: https://nhannguyendacoder.com/blog/self-learning-gioi-thieu-du-an-toi-tu-hoc-lap-trinh?s=blog
 [thumbnail]: ../assets/images/self-learning-ap-dung-cac-nghien-cuu-ve-viec-hoc-va-tri-nho/nghien-cuu-viec-hoc.jpg
 
 

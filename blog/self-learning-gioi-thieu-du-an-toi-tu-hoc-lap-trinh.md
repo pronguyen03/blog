@@ -5,7 +5,7 @@ published: true
 keywords: tu hoc lap trinh, lap trinh, tu hoc Angular, lap trinh angular, html, css, javascript, Fresher Frontend, Fresher angular
 categories: self-learning
 date: 2020-06-25
-image: https://nhannguyendacoder.web.app/assets/images/self-learning-gioi-thieu-du-an-toi-tu-hoc-lap-trinh/toi-tu-hoc-lap-trinh.jpg
+image: https://nhannguyendacoder.com/assets/images/self-learning-gioi-thieu-du-an-toi-tu-hoc-lap-trinh/toi-tu-hoc-lap-trinh.jpg
 ---
 
 # Giới thiệu dự án Tôi tự học lập trình
@@ -177,9 +177,9 @@ Dự án này có hai mục đích chính:
 
 Vì vậy các bạn chỉ nên xem đây là **một nơi để bắt đầu** hành trình tìm hiểu về lập trình của mình. Dù cho sau dự án này, các bạn đã đi làm hay chưa thì cũng cần phải bổ sung thên nhiều kiến thức khác (mình sẽ chia sẻ về hướng đi tiếp theo ở cuối dự án). 
 
-[toidatuhoclaptrinhnhuthenaoblog]: https://nhannguyendacoder.web.app/blog/self-learning-toi-da-tu-hoc-lap-trinh-va-tim-duoc-viec-lam-nhu-the-nao?s=blog
+[toidatuhoclaptrinhnhuthenaoblog]: https://nhannguyendacoder.com/blog/self-learning-toi-da-tu-hoc-lap-trinh-va-tim-duoc-viec-lam-nhu-the-nao?s=blog
 
-[self-learning-1]: https://nhannguyendacoder.web.app/blog/self-learning-ap-dung-cac-nghien-cuu-ve-viec-hoc-va-tri-nho?s=blog
+[self-learning-1]: https://nhannguyendacoder.com/blog/self-learning-ap-dung-cac-nghien-cuu-ve-viec-hoc-va-tri-nho?s=blog
 
 [fanpage]: https://facebook.com/NhanNguyenDaCoder
 [intern-Frontend-jobs]: https://www.google.com/search?sxsrf=ALeKk02xeBEfyD40HWgrUipuZzOs-aFrbQ%3A1593012067685&ei=Y2_zXsyyKdfZrQHs_LOIAg&q=th%E1%BB%B1c+t%E1%BA%ADp+front+end&oq=th%E1%BB%B1c+t%E1%BA%ADp+front&gs_lcp=CgZwc3ktYWIQAxgAMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB46BAgjECc6BAgAEA06CAgAEAgQDRAeOgUIABCRAjoICAAQsQMQkQI6BAgAEEM6BQgAELEDOgUIABCDAToCCAA6BwgjELECECc6BAgAEAo6BwgjELACECdQ9VpYgX9g2IcBaAlwAHgHgAG7AYgBxhSSAQUxNC4xMZgBAKABAaoBB2d3cy13aXo&sclient=psy-ab
