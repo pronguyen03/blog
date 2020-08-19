@@ -5,12 +5,12 @@ published: true
 keywords: angular, compress image, nen hinh anh, giam dung luong hinh anh
 categories: angular
 date: 2020-08-19
-image: https://nhannguyendacoder.com/assets/images/angular-load-config-tu-file-json-trong-angular/dynamic-json-configs.png
+image: https://nhannguyendacoder.com/assets/images/angular-load-config-tu-file-json-trong-angular/dynamic-json-configs.jpg
 ---
 
 # [Angular Trick] Load config từ file json trong Angular
 
-![Load config từ file json trong Angular](../assets/images/angular-load-config-tu-file-json-trong-angular/dynamic-json-configs.png)
+![Load config từ file json trong Angular](../assets/images/angular-load-config-tu-file-json-trong-angular/dynamic-json-configs.jpg)
 
 Trong bài này mình sẽ chia sẻ cách load config động từ file json trong Angular.
 
