@@ -1,5 +1,5 @@
 ---
-title: [Angular Trick] Giảm dung lượng hình ảnh trước khi upload trong ứng dụng Angular
+title: Angular Trick - Giảm dung lượng hình ảnh trước khi upload trong ứng dụng Angular
 description: Trong bài này mình sẽ chia sẻ cách giảm dung lượng hình ảnh trước khi upload trong ứng dụng Angular.
 published: true
 keywords: angular, compress image, nen hinh anh, giam dung luong hinh anh
@@ -121,7 +121,7 @@ export class AppComponent  {
         .pipe(take(1))
         .subscribe(compressedImage => {
             console.log(`Image size after compressed: ${compressedImage.size} bytes.`)
-            // now you can do upload on the compressed image 
+            // now you can do upload the compressed image 
         })
     }
 }
