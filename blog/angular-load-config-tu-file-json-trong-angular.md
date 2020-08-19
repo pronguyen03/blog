@@ -10,7 +10,7 @@ image: https://nhannguyendacoder.com/assets/images/angular-load-config-tu-file-j
 
 # [Angular Trick] Load config từ file json trong Angular
 
-![Nén hình ảnh](../assets/images/angular-load-config-tu-file-json-trong-angular/dynamic-json-configs.png)
+![Load config từ file json trong Angular](../assets/images/angular-load-config-tu-file-json-trong-angular/dynamic-json-configs.png)
 
 Trong bài này mình sẽ chia sẻ cách load config động từ file json trong Angular.
 
