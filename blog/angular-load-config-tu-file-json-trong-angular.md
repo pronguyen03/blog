@@ -24,7 +24,18 @@ Khi bạn muốn thay đổi config (rest url, api key, debug mode,...) thì ch�
 
 Tình huống thực tế mà mình gặp là khi app trên production có bug, cần bật mode debug lên hay backend thay đổi public url thì chỉ cần cập nhật lại file `config.json` mà không cần phải build lại app.
 
-## Nội dung
+## Ưu điểm (Chau Tran)
+
+- Build (ng build) 1 lần duy nhất cho tất cả các environments liên quan. Config sẽ được inject với giá trị phù hợp ở CI/CD pipeline.
+- Khi thay đổi config, chỉ cần thay đổi ở tầng CI/CD mà ko cần phải thay đổi về code -> không cần phải build lại Angular 
+
+## Nhược điểm (Chau Tran)
+
+- Setup CI/CD pipeline phức tạp.
+- Không theo chuẩn environment.ts của Angular
+- Vì không phải là 1 file config dạng global như environment.ts. khi setup module mà module cần configuration từ environment (và module đang setup không hỗ trợ useFactory) thì sẽ không thể dùng được config để setup module này lúc này. 
+
+## Configuration Service
 
 Đầu tiên chúng ta sẽ tạo một constant để lưu đường dẫn file config để sau này có thay đổi thì chỉ cần đổi một nơi thôi. 
 
@@ -78,10 +89,6 @@ Khai báo interface cho Configuration Service. Ở đây mình dùng interface �
 
 ```typescript
 // file: i-configuration.service.ts
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { ConfigurationService } from "./configuration.service";
-import { IConfiguration } from "./i-configuration";
 
 @Injectable({
     providedIn: "root",
@@ -99,8 +106,6 @@ Chúng ta sẽ dùng `HttpClient` để đọc file json. Có một vấn đề 
 
 ```typescript
 // file: no-interceptor-http-client.ts
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpBackend } from '@angular/common/http';
 
 /**
  * This is to make a request that are not going through interceptors chains
@@ -120,12 +125,6 @@ Tiếp theo chúng ta sẽ khai báo một implementation của interface `IConf
 
 ```typescript
 // file: configuration.service.ts
-import { Injectable } from "@angular/core";
-import { Observable, ReplaySubject, throwError } from "rxjs";
-import { IConfigurationService } from "./i-configuration.service";
-import { IConfiguration } from "./i-configuration";
-import { NoInterceptorHttpClient } from "./no-interceptor-http-client";
-import { CONFIG_FILE } from "./constant";
 
 @Injectable()
 export class ConfigurationService implements IConfigurationService {
@@ -137,13 +136,12 @@ export class ConfigurationService implements IConfigurationService {
 
     // read config file
     initialize() {
-        this.httpClient.get<IConfiguration>(CONFIG_FILE).subscribe(
-            configs => this.configs.next(configs),
-            error => {
-                console.error("Failed to load app configs.");
-                throwError(error);
-            }
-        );
+        this.httpClient.get<IConfiguration>(CONFIG_FILE)
+            .pipe(catchError(error => {
+                error.message = 'Failed to load app configs: ' + error.message
+                return throwError(error)
+            }))
+            .subscribe(configs => this.configs.next(configs))
     }
 }
 
@@ -153,7 +151,6 @@ Chúng ta sẽ load config đầu tiên khi app bắt đầu chạy. Vì vậy c
 
 ```typescript
 // file: preload-config.factory.ts
-import { IConfigurationService } from './i-configuration.service';
 
 export function PreloadConfigFactory(configuration: IConfigurationService) {
     return () => configuration.initialize();
@@ -190,16 +187,14 @@ export function PreloadConfigFactory(configuration: IConfigurationService) {
 }
 ```
 
-Khai báo load config factory trong `AppModule`. Các bạn lưu ý chúng ta chỉ làm việc với `IConfigurationService`, không phải implementation của nó là `ConfigurationService`.
+Vì sao đặt file config trong thư mục assets? Vì đây là thư mục mà Angular sẽ giữ lại sau khi build, chứa tất cả các static file của app như hình ảnh, icon, và cả file config nữa. Ứng dụng Angular sau khi build sẽ có dạng như sau
+
+![angular after build](../assets/images/angular-load-config-tu-file-json-trong-angular/build.png)
+
+Tiếp theo, khai báo load config factory trong `AppModule`. Các bạn lưu ý chúng ta chỉ làm việc với `IConfigurationService`, không phải implementation của nó là `ConfigurationService`.
 
 ```typescript
 // file: app.module.ts
-import { NgModule, APP_INITIALIZER } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { IConfigurationService } from "./i-configuration.service";
-import { PreloadConfigFactory } from "./preload-config.factory";
-import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     imports:      [ BrowserModule, HttpClientModule ],
@@ -221,8 +216,6 @@ Inject `IConfigurationService` vào `AppComponent` và sử dụng thôi nào.
 
 ```typescript
 // file: app.component.ts
-import { Component, VERSION } from '@angular/core';
-import { IConfigurationService } from "./i-configuration.service";
 
 @Component({
     selector: 'my-app',
@@ -243,18 +236,22 @@ export class AppComponent  {
 </pre>
 ```
 
-## Load config từ file json ở file main.ts
+## Load config từ file json ở file main.ts 
 
-Bạn cũng có thể load file config ngay ở file `main.ts`. Ở đây mình cần chạy hàm `enableProdMode()` cho môi trường production thì làm như sau: 
+Ngoài cách trên, bạn cũng có thể load file config ngay ở file `main.ts`. 
+Ở đây mình cần chạy hàm `enableProdMode()` cho môi trường production thì làm như sau: 
+
+Tạo inject token cho app configs 
+
+```typescript
+// token.ts
+export const Configs = new InjectionToken<IConfiguration>('App Configs')
+```
+
+Provide configs fetch được cho `Configs` token trong khi gọi hàm `platformBrowserDynamic`
 
 ```typescript
 // file: main.ts
-import './polyfills';
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './app/app.module';
-import { IConfiguration } from './app/i-configuration';
-import { CONFIG_FILE } from './app/constant';
 
 (async () => {
     try {
@@ -265,7 +262,10 @@ import { CONFIG_FILE } from './app/constant';
             enableProdMode();
         }
         
-        platformBrowserDynamic()
+        platformBrowserDynamic([{
+            provide: Configs,
+            useValue: configs // (Tiep Phan)
+        }])
         .bootstrapModule(AppModule)
         .catch((err) => console.error(err));
     } catch (error) {
@@ -274,10 +274,46 @@ import { CONFIG_FILE } from './app/constant';
 })()
 ```
 
+Inject `Configs` token và update lại `AppComponent` 
+
+```typescript
+// file: app.component.ts
+
+@Component({
+    selector: 'my-app',
+    templateUrl: './app.component.html',
+    styleUrls: [ './app.component.css' ]
+})
+export class AppComponent  {
+    constructor(
+        public config: IConfigurationService,
+        @Inject(Configs) public configs: IConfiguration
+    ) {}
+}
+
+```
+
+```html
+<!--file: app.component.html-->
+<h2>The configs loaded from config.json file</h2>
+
+<h3>Loaded by Configuration service: </h3>
+<pre>
+    {{(config.configs$ | async) | json}}
+</pre>
+
+<h3>Loaded by Configs token at main.ts: </h3>
+<pre>
+    {{configs | json}}
+</pre>
+```
+
 Bài viết này có tham khảo nội dung từ các nguồn sau: 
 - https://leanpub.com/angular-architecture-the-unofficial-guide
 - https://github.com/angular/angular/issues/20203#issuecomment-368680437
 - https://stackoverflow.com/questions/42110817/load-config-json-file-in-angular-2/42111501
+
+Thanks a Tiep Phan, Chau Tran đã góp ý phần ưu, nhược điểm của phương pháp này và phần load config ở main.ts.
 
 Cảm ơn các bạn đã theo dõi bài viết, mong nhận được góp ý từ mọi người.
 
