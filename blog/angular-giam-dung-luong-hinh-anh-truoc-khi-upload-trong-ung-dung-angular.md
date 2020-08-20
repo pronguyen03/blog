@@ -142,7 +142,7 @@ export class AppComponent  {
 
 ```
 
-Thanks a Tiep Phan đã góp ý phần nhược điểm của phương pháp này.
-
 Cảm ơn các bạn đã theo dõi bài viết, mong nhận được góp ý từ mọi người.
+
+Thanks a Tiep Phan đã góp ý phần nhược điểm của phương pháp này.
 

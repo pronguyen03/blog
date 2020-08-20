@@ -83,3 +83,7 @@ File name of a blog post:
 ## Still have questions?
 
 For any futher questions, just creat a new issue. Thank you.
+
+TODO: 
+- [ ] fix overflow on mobile browser
+- [ ] format code blocks

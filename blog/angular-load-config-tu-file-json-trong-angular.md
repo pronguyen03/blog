@@ -2,7 +2,7 @@
 title: Angular Trick - Load config từ file json trong Angular
 description: Trong bài này mình sẽ chia sẻ cách load config động từ file json trong Angular.
 published: true
-keywords: angular, compress image, nen hinh anh, giam dung luong hinh anh
+keywords: angular, configs, json
 categories: angular
 date: 2020-08-19
 image: https://nhannguyendacoder.com/assets/images/angular-load-config-tu-file-json-trong-angular/dynamic-json-configs.jpg
@@ -224,14 +224,12 @@ export class AppComponent  {
 </pre>
 ```
 
+Cảm ơn các bạn đã theo dõi bài viết, mong nhận được góp ý từ mọi người.
+
+Thanks a Tiep Phan, Chau Tran đã góp ý phần ưu, nhược điểm của phương pháp này và phần load config ở main.ts.
+
 Bài viết này có tham khảo nội dung từ các nguồn sau: 
 - https://leanpub.com/angular-architecture-the-unofficial-guide
 - https://stackoverflow.com/questions/42110817/load-config-json-file-in-angular-2/42111501
 - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-
-Thanks a Tiep Phan, Chau Tran đã góp ý phần ưu, nhược điểm của phương pháp này và phần load config ở main.ts.
-
-Cảm ơn các bạn đã theo dõi bài viết, mong nhận được góp ý từ mọi người.
-
-
 
