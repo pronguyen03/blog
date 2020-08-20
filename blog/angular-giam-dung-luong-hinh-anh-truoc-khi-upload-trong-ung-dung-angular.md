@@ -21,13 +21,13 @@ Link demo trên [stackblitz](https://stackblitz.com/edit/angular-compress-image?
 - Bạn không có service riêng để xử lý hình ảnh, ví dụ như bạn dùng Firebase làm backend và upload hình lên trên đó luôn, và khách hàng của bạn không biết tối ưu hình ảnh bằng Photoshop hay tinypng.com.
 - Không có yêu cầu quá khắc khe về chất lượng hình ảnh
 
-## Ưu điểm (Tiep Phan)
+## Ưu điểm
 
 - Xử lý hình ảnh ngay trên frontend
 - Hạn chế rủi ro khi client upload hình có dung lượng quá lớn
 - Không cần thêm service xử lý hình ảnh
 
-## Nhược điểm
+## Nhược điểm (Tiep Phan)
 
 - Chất lượng hình ảnh chưa được optimize như các thư viện khác cho backend
 - Chưa hỗ trợ trên Safari, IE và các trình duyệt trên browser, [xem chi tiết](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob)
