@@ -54,7 +54,6 @@ export interface ILoggingConfiguration {
     sendToCentralizedServer: boolean;
     sendToConsole: boolean;
     logentriesToken: string;
-    logglyToken: string;
 }
 
 // rest api and media configs
@@ -85,13 +84,13 @@ export interface IConfiguration {
 
 ```
 
-Khai báo interface cho Configuration Service. Ở đây mình dùng interface để abstract configuration service, user chỉ cần biết tới `IConfigurationService` mà không cần quan tâm tới implementation của nó là `ConfigurationService`, sau này bạn cũng có thể đổi `ConfigurationService` thành `MockConfigurationService` để test chẳng hạn. Các implementation của `IConfigurationService` phải cung cấp property `readonly configs$: Observable<IConfiguration>` để client đăng ký nhận config, và method `initialize()` để khởi tạo config.
+Khai báo interface cho Configuration Service. (Thực ra là abstract class, vì interface không thể dùng cho Dependency Injection system của Angular, trong Typescript thì interface và abstract class có thể dùng thay thế cho nhau) 
 
 ```typescript
 // file: i-configuration.service.ts
 
 @Injectable({
-    providedIn: "root",
+    providedIn: "platform",
     useClass: ConfigurationService
 })
 export abstract class IConfigurationService {
@@ -102,24 +101,7 @@ export abstract class IConfigurationService {
 }
 ```
 
-Chúng ta sẽ dùng `HttpClient` để đọc file json. Có một vấn đề là đôi khi bạn không muốn request tới file config phải đi qua các interceptor. Vì vậy mình đã viết một wrapper class để tạo các http request không đi qua các interceptor.
-
-```typescript
-// file: no-interceptor-http-client.ts
-
-/**
- * This is to make a request that are not going through interceptors chains
- * related to comment https://github.com/angular/angular/issues/20203#issuecomment-368680437
- */
-@Injectable({
-    providedIn: 'root'
-})
-export class NoInterceptorHttpClient extends HttpClient {
-    constructor(handler: HttpBackend) {
-        super(handler);
-    }
-}
-```
+Mình dùng interface để abstract configuration service, user chỉ cần biết tới `IConfigurationService` mà không cần quan tâm tới implementation của nó là `ConfigurationService`, sau này bạn cũng có thể đổi `ConfigurationService` thành `MockConfigurationService` để test chẳng hạn. Các implementation của `IConfigurationService` phải cung cấp property `readonly configs$: Observable<IConfiguration>` để client đăng ký nhận config, và method `initialize()` để khởi tạo config. Ở đây mình dùng `providedIn: "platform"` để service được khởi tạo cùng với platform injector, và chúng ta có thể dùng nó ở file `main.ts`
 
 Tiếp theo chúng ta sẽ khai báo một implementation của interface `IConfigurationService` là `ConfigurationService`. Đây là class sẽ thực hiện việc load config từ file json và trả về cho user.
 
@@ -128,36 +110,33 @@ Tiếp theo chúng ta sẽ khai báo một implementation của interface `IConf
 
 @Injectable()
 export class ConfigurationService implements IConfigurationService {
-    private configs = new ReplaySubject<IConfiguration>(1);
-    // public api for clients
+    private configs = new ReplaySubject<IConfiguration>(1)
+
     readonly configs$: Observable<IConfiguration> = this.configs.asObservable();
 
-    constructor(private httpClient: NoInterceptorHttpClient) {}
+    async initialize() {
+        try {
+            let configs: IConfiguration = await fetch(CONFIG_FILE)
+            .then(res => {
+                if (!res.ok) { 
+                    return Promise.reject(new Error('Response with ok is false')) 
+                }
+                return res.json()
+            })
 
-    // read config file
-    initialize() {
-        this.httpClient.get<IConfiguration>(CONFIG_FILE)
-            .pipe(catchError(error => {
-                error.message = 'Failed to load app configs: ' + error.message
-                return throwError(error)
-            }))
-            .subscribe(configs => this.configs.next(configs))
+            this.configs.next(configs)
+        } catch (error) {
+            error.message = 'Failed to load app configs: ' + error.message
+            throw error
+        }
     }
 }
 
 ```
 
-Chúng ta sẽ load config đầu tiên khi app bắt đầu chạy. Vì vậy cần khai báo một hàm factory cho việc đó.
+Mình sử dụng `async` và `await` cho các hàm trả về promise giúp code dễ đọc hơn. Sau khi fetch file config `fetch(CONFIG_FILE)`, mình sẽ check xem response trả về có ok hay không vì với hàm `fetch`, các response trả về HTTP error status như 404, 500 thì  hàm này cũng không quăng ra exeption.
 
-```typescript
-// file: preload-config.factory.ts
-
-export function PreloadConfigFactory(configuration: IConfigurationService) {
-    return () => configuration.initialize();
-}
-```
-
-## Sử dụng configuration service
+## Load config từ file json ở file main.ts 
 
 Đầu tiên hãy tạo file `assets/config.json` với nội dung như sau
 
@@ -181,8 +160,7 @@ export function PreloadConfigFactory(configuration: IConfigurationService) {
     "logging": {
         "sendToCentralizedServer": false,
         "sendToConsole": true,
-        "logentriesToken": "logentriesToken",
-        "logglyToken": "logglyToken"
+        "logentriesToken": "logentriesToken"
     }
 }
 ```
@@ -191,28 +169,38 @@ Vì sao đặt file config trong thư mục assets? Vì đây là thư mục mà
 
 ![angular after build](../assets/images/angular-load-config-tu-file-json-trong-angular/build.png)
 
-Tiếp theo, khai báo load config factory trong `AppModule`. Các bạn lưu ý chúng ta chỉ làm việc với `IConfigurationService`, không phải implementation của nó là `ConfigurationService`.
+Chúng ta sẽ load file config ngay ở file `main.ts` để provide cho app và sử dụng ngay tại file này luôn, ví dụ mình cần chạy hàm `enableProdMode()` cho môi trường production thì làm như sau: 
 
 ```typescript
-// file: app.module.ts
+// file: main.ts
 
-@NgModule({
-    imports:      [ BrowserModule, HttpClientModule ],
-    declarations: [ AppComponent ], 
-    bootstrap:    [ AppComponent ],
-    providers: [
-        {
-            provide: APP_INITIALIZER,
-            deps: [IConfigurationService],
-            multi: true,
-            useFactory: PreloadConfigFactory
-        },
-    ]
-})
-export class AppModule { }
+(async () => {
+    try {
+        let platformRef = await platformBrowserDynamic()
+        let configService = platformRef.injector.get(IConfigurationService)
+        configService.initialize()
+
+        let configs = await configService.configs$.pipe(first()).toPromise()
+        if (configs.production) {
+            enableProdMode();
+        }
+        
+        platformRef.bootstrapModule(AppModule)
+    } catch (error) {
+        console.error('Initializing error', error)
+    }
+})()
 ```
 
-Inject `IConfigurationService` vào `AppComponent` và sử dụng thôi nào.
+Đầu tiên chúng ta sẽ đợi platform khởi tạo xong sẽ trả về một platform reference `let platformRef = await platformBrowserDynamic()`. Với platform reference có được ta có thể lấy ra configuration service `let configService = platformRef.injector.get(IConfigurationService)` và init nó `configService.initialize()`.
+
+Init xong thì lấy giá trị configs như sau `let configs = await configService.configs$.pipe(first()).toPromise()` (lấy giá trị đầu tiên của stream `configs$`).
+
+Ở đây mình check giá trị của config `production` để xem có cần bật mode production hay không. Và cuối cùng là bootstrap `AppModule`.
+
+## Sử dụng configuration service
+
+Vì chúng ta đã inject `IConfigurationService` ở platform (`providedIn: "platform"`) và init nó ở `main.ts` rồi nên bây giờ chỉ cần inject vào `AppComponent` và sử dụng thôi nào.
 
 ```typescript
 // file: app.component.ts
@@ -236,82 +224,10 @@ export class AppComponent  {
 </pre>
 ```
 
-## Load config từ file json ở file main.ts 
-
-Ngoài cách trên, bạn cũng có thể load file config ngay ở file `main.ts`. 
-Ở đây mình cần chạy hàm `enableProdMode()` cho môi trường production thì làm như sau: 
-
-Tạo inject token cho app configs 
-
-```typescript
-// token.ts
-export const Configs = new InjectionToken<IConfiguration>('App Configs')
-```
-
-Provide configs fetch được cho `Configs` token trong khi gọi hàm `platformBrowserDynamic`
-
-```typescript
-// file: main.ts
-
-(async () => {
-    try {
-        // this line also run each time user reload the browser
-        let configs: IConfiguration = await fetch(CONFIG_FILE).then(res => res.json())
-
-        if (configs.production) {
-            enableProdMode();
-        }
-        
-        platformBrowserDynamic([{
-            provide: Configs,
-            useValue: configs // (Tiep Phan)
-        }])
-        .bootstrapModule(AppModule)
-        .catch((err) => console.error(err));
-    } catch (error) {
-        console.error('Initializing error', error)
-    }
-})()
-```
-
-Inject `Configs` token và update lại `AppComponent` 
-
-```typescript
-// file: app.component.ts
-
-@Component({
-    selector: 'my-app',
-    templateUrl: './app.component.html',
-    styleUrls: [ './app.component.css' ]
-})
-export class AppComponent  {
-    constructor(
-        public config: IConfigurationService,
-        @Inject(Configs) public configs: IConfiguration
-    ) {}
-}
-
-```
-
-```html
-<!--file: app.component.html-->
-<h2>The configs loaded from config.json file</h2>
-
-<h3>Loaded by Configuration service: </h3>
-<pre>
-    {{(config.configs$ | async) | json}}
-</pre>
-
-<h3>Loaded by Configs token at main.ts: </h3>
-<pre>
-    {{configs | json}}
-</pre>
-```
-
 Bài viết này có tham khảo nội dung từ các nguồn sau: 
 - https://leanpub.com/angular-architecture-the-unofficial-guide
-- https://github.com/angular/angular/issues/20203#issuecomment-368680437
 - https://stackoverflow.com/questions/42110817/load-config-json-file-in-angular-2/42111501
+- https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 
 Thanks a Tiep Phan, Chau Tran đã góp ý phần ưu, nhược điểm của phương pháp này và phần load config ở main.ts.
 
