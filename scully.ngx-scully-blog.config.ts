@@ -2,8 +2,8 @@ import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 
 const { MinifyHtml } = require('scully-plugin-minify-html');
-const { DisableAngular } = require('scully-plugin-disable-angular');
-const postRenderers = [DisableAngular, MinifyHtml]
+// const { DisableAngular } = require('scully-plugin-disable-angular');
+const postRenderers = [MinifyHtml]
 
 const SitemapPlugin = getSitemapPlugin();
 setPluginConfig(SitemapPlugin, {

@@ -11,6 +11,7 @@ export class RouteService {
   constructor(private scullyRoutes: ScullyRoutesService) { }
 
   getRoutes(category?: string): Observable<ScullyRoute[]> {
+    console.log(category)
     if (category) {
       return this.scullyRoutes.available$.pipe(
         map(routes => this.filterRoutes(routes, category))

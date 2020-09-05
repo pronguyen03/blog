@@ -4,7 +4,7 @@ var scully_plugin_sitemap_1 = require("@gammastream/scully-plugin-sitemap");
 var scully_1 = require("@scullyio/scully");
 var MinifyHtml = require('scully-plugin-minify-html').MinifyHtml;
 var DisableAngular = require('scully-plugin-disable-angular').DisableAngular;
-var postRenderers = [DisableAngular, MinifyHtml];
+var postRenderers = [MinifyHtml];
 var SitemapPlugin = scully_plugin_sitemap_1.getSitemapPlugin();
 scully_1.setPluginConfig(SitemapPlugin, {
     urlPrefix: 'https://nhannguyendacoder.com',
