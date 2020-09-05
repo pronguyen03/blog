@@ -1,16 +1,16 @@
 ---
-title: 'Học Angular theo SGK phần 0: Giới thiệu'
+title: 'Học Angular theo SGK - Phần 0: Giới thiệu'
 description: 'Series hướng dẫn cách sử dụng Angular để phát triển các ứng dụng từ đơn giản đến phức tạp'
-published: false
+published: true
 keywords: 'angular, angular.io, hoc angular'
-categories: 'angular'
+categories: angular
 date: '2020-09-05'
-image: 'https://nhannguyendacoder.com/assets/images/angular-hoc-angular-theo-sgk-0-gioi-thieu/phan-0.png'
+image: 'https://nhannguyendacoder.com/assets/images/angular-hoc-angular-theo-sgk-0-gioi-thieu/phan-0.jpg'
 
 ---
-# Học Angular theo SGK phần 0: Giới thiệu
+# Học Angular theo SGK - Phần 0: Giới thiệu
 
-[post image, for example ![your-first-image](../assets/images/angular-hoc-angular-theo-sgk-0-gioi-thieu/phan-0.png)]
+![your-first-image](../assets/images/angular-hoc-angular-theo-sgk-0-gioi-thieu/phan-0.jpg)
 
 **Nội dung trong series này được lượt dịch lại từ trang document của Angular tại [angular.io/docs](https://angular.io/docs)**
 

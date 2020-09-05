@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var scully_plugin_sitemap_1 = require("@gammastream/scully-plugin-sitemap");
 var scully_1 = require("@scullyio/scully");
 var MinifyHtml = require('scully-plugin-minify-html').MinifyHtml;
-var DisableAngular = require('scully-plugin-disable-angular').DisableAngular;
+// const { DisableAngular } = require('scully-plugin-disable-angular');
 var postRenderers = [MinifyHtml];
 var SitemapPlugin = scully_plugin_sitemap_1.getSitemapPlugin();
 scully_1.setPluginConfig(SitemapPlugin, {
