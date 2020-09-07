@@ -5,14 +5,14 @@ published: true
 keywords: 'angular, angular.io, hoc angular'
 categories: angular
 date: '2020-09-05'
-image: 'https://nhannguyendacoder.com/assets/images/angular-hoc-angular-theo-sgk-0-gioi-thieu/phan-0.jpg'
+image: 'https://nhannguyendacoder.com/assets/images/angular-sgk-0/phan-0.jpg'
 
 ---
 # Học Angular theo SGK - Phần 0: Giới thiệu
 
-![your-first-image](../assets/images/angular-hoc-angular-theo-sgk-0-gioi-thieu/phan-0.jpg)
+![your-first-image](../assets/images/angular-sgk-0/phan-0.jpg)
 
-**Nội dung trong series này được lượt dịch lại từ trang document của Angular tại [angular.io/docs](https://angular.io/docs)**
+**Nội dung trong series này được lượt dịch lại từ trang document của Angular tại [angular.io](https://angular.io/docs)**
 
 *Ý tưởng của series này đến từ nhu cầu cá nhân của mình. Sau khoảng vài năm làm việc với Angular thì mình muốn refresh lại kiên thức một chút nên mình dự định viết một series về Angular, vừa để ôn lại kiến thức, cập nhật thay đổi mới nhất và chia sẻ lại cho cộng đồng.* 
 
