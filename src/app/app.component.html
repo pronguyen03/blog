@@ -1,15 +1,1 @@
-<header>
-    <h1>{{SITE_CONFIG.NAME}}</h1>
-    <ng-container *ngFor="let M of MENUS; let i = index">
-        <a routerLink="{{M.ROUTE}}">{{M.NAME}}</a> 
-        <span *ngIf="i !== MENUS.length -1"> | </span>
-    </ng-container>
-</header>
-
-<section id="main">
-    <router-outlet></router-outlet>
-</section>
-
-<footer>
-    <p [innerHTML]="SITE_CONFIG.COPYRIGHT"></p>
-</footer>
+<router-outlet></router-outlet>

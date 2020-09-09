@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { SITE_CONFIG } from './site.config';
+import { SITE_CONFIG } from '../constants/site.config';
 
 export class SEOData {
     title: string
@@ -19,7 +19,9 @@ export class SEOData {
     }
 }
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class SEOService {
     private rootUrl = SITE_CONFIG.ROOT_URL
     
