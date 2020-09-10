@@ -8,7 +8,6 @@ import { PortfolioRoutingModule } from './portfolio-routing.module';
 import { PortfolioComponent } from './portfolio.component';
 
 
-
 @NgModule({
   declarations: [
     PortfolioComponent, 

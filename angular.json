@@ -52,8 +52,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/styles.scss",
-              "src/styles/highlightjs-dracula-them.scss"
+              "src/styles/styles.scss"
             ],
             "scripts": [
             ]
