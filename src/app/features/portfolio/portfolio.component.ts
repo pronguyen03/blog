@@ -12,7 +12,8 @@ export class PortfolioComponent {
   constructor(seoService: SEOService) { 
     seoService.doSEO({
       title: 'Nhan Nguyen - ' + SITE_CONFIG.JOB_TITLE,
-      description: SITE_CONFIG.PORTFOLIO_DESC
+      description: SITE_CONFIG.PORTFOLIO_DESC,
+      image: SITE_CONFIG.PORTFOLIO_IMAGE
     })
   }
 

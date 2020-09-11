@@ -8,6 +8,7 @@ export const SITE_CONFIG = {
     PORTFOLIO_DESC: 'I help companies develop high performance, scalable and maintainable Angular applications.',
     JOB_TITLE: 'Senior Angular Developer',
     IMAGE: 'https://nhannguyendacoder.com/assets/images/nhan-nguyen-da-coder.jpg',
+    PORTFOLIO_IMAGE: 'https://nhannguyendacoder.com/assets/images/portfolio-thumb.png',
     KEYWORDS: 'tu hoc lap trinh, tu hoc lap trinh tu can ban, lap trinh',
     COPYRIGHT: `Copyright &copy; ${new Date().getFullYear()} <a target="_blank" href="https://www.facebook.com/NhanNguyenDaCoder">Nhan Nguyen Da Coder</a>. All Rights Reserved`,
     FANPAGE: 'https://www.facebook.com/NhanNguyenDaCoder',
