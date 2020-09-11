@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MENUS } from 'src/app/constants/constants';
-import { SITE_CONFIG } from 'src/app/constants/site.config';
+import { MENUS, SITE_CONFIG } from '../../constants';
+import { SEOService } from '../../services';
 
 @Component({
   selector: 'app-blog',
@@ -21,14 +21,14 @@ import { SITE_CONFIG } from 'src/app/constants/site.config';
       <p [innerHTML]="SITE_CONFIG.COPYRIGHT"></p>
     </footer>
   `,
-  styles: [
-  ]
 })
 export class BlogComponent implements OnInit {
   SITE_CONFIG = SITE_CONFIG
   MENUS = MENUS
 
-  constructor() { }
+  constructor(seoService: SEOService) { 
+    seoService.doSEO()
+  }
 
   ngOnInit(): void {
   }
