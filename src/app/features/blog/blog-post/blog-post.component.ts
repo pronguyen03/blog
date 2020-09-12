@@ -6,11 +6,11 @@ import { SITE_CONFIG } from 'src/app/constants';
 import { RouteService, SEOService } from 'src/app/services';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss']
+  selector: 'app-blog-post',
+  templateUrl: './blog-post.component.html',
+  styleUrls: ['./blog-post.component.scss']
 })
-export class PostComponent {
+export class BlogPostComponent {
   // // For related blog posts in the navbar
   // routes$s: Observable<ScullyRoute[]>[] = []
   // SITE_CONFIG = SITE_CONFIG

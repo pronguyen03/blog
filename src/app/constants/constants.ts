@@ -21,6 +21,6 @@ export const CATEGORIES = [
 ]
 
 export const MENUS = [
-    {NAME: 'Trang chủ', ROUTE: '/'},
-    {NAME: 'Giới thiệu', ROUTE: '/about'},
+    {NAME: 'Trang chủ', ROUTE: '/blog'},
+    {NAME: 'Giới thiệu', ROUTE: '/blog/about'},
 ]

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutMeComponent } from './about/about-me.component';
+import { BlogAboutComponent } from './blog-about/blog-about.component';
+import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogComponent } from './blog.component';
 import { HomeComponent } from './home/home.component';
-import { PostComponent } from './post/post.component';
 
 
 const routes: Routes = [
@@ -12,8 +12,8 @@ const routes: Routes = [
     component: BlogComponent,
     children: [
       { path: '', component: HomeComponent },
-      { path: 'about', component: AboutMeComponent },
-      { path: ':slug', component: PostComponent },
+      { path: 'about', component: BlogAboutComponent },
+      { path: ':slug', component: BlogPostComponent },
     ]
   },
 ];
