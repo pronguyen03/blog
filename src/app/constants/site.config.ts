@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
     IMAGE: 'https://nhannguyendacoder.com/assets/images/nhan-nguyen-da-coder.jpg',
     PORTFOLIO_IMAGE: 'https://nhannguyendacoder.com/assets/images/portfolio-thumb.png',
     KEYWORDS: 'tu hoc lap trinh, tu hoc lap trinh tu can ban, lap trinh',
-    COPYRIGHT: `Copyright &copy; ${new Date().getFullYear()} <a target="_blank" href="https://www.facebook.com/NhanNguyenDaCoder">Nhan Nguyen Da Coder</a>. All Rights Reserved`,
+    COPYRIGHT: `Copyright &copy; ${new Date().getFullYear()} <a target="_blank" class="text-white" href="https://www.facebook.com/NhanNguyenDaCoder">Nhan Nguyen Da Coder</a>. All Rights Reserved.`,
     FANPAGE: 'https://www.facebook.com/NhanNguyenDaCoder',
     PROFILE: 'https://www.facebook.com/nhaancs',
     GROUP: 'https://www.facebook.com/groups/toituhoclaptrinhgroup',
