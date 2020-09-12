@@ -1,1 +1,19 @@
-<p>blog-categories works!</p>
+<div class="card my-4">
+    <h5 class="card-header">Categories</h5>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="list-unstyled mb-0">
+                    <li *ngFor="let c of CATEGORIES">
+                        <a 
+                            routerLinkActive="active"  
+                            [routerLinkActiveOptions]="{exact:true}"
+                            routerLink="/blog"
+                            [queryParams]="c.KEY ? {c: c.KEY}:null"
+                            >{{c.NAME}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
