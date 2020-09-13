@@ -2,12 +2,12 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 import { Category } from 'src/app/models';
 
 @Component({
-  selector: 'app-filters-info',
-  templateUrl: './filters-info.component.html',
-  styleUrls: ['./filters-info.component.scss'],
+  selector: 'app-blog-filters-info',
+  templateUrl: './blog-filters-info.component.html',
+  styleUrls: ['./blog-filters-info.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FiltersInfoComponent {
+export class BlogFiltersInfoComponent {
   @Input() category: Category
   @Input() searchTerm: string
 }

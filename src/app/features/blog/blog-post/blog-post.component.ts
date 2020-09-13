@@ -8,7 +8,6 @@ import { PostService, SEOService } from 'src/app/services';
 })
 export class BlogPostComponent {
   constructor(seoService: SEOService, public postService: PostService) {
-    console.log(postService.curentPost)
     seoService.doSEO(postService.curentPost)
   }
 }

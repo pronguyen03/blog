@@ -63,7 +63,11 @@ export class PostService {
   }
 
   private setRelatedPostsToCurrentPost(currentPost: Post) {
-    let cats = currentPost?.categories
+    if (!currentPost || !currentPost.categories) {
+      return
+    }
+    
+    let cats = currentPost.categories
       .split(',')
       .map(c => c.trim().toLowerCase()) || []
 
