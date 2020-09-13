@@ -7,7 +7,5 @@ import { PostService } from 'src/app/services';
   styleUrls: ['./blog-home.component.scss']
 })
 export class BlogHomeComponent {
-  constructor(public postService: PostService) {
-
-  }
+  constructor(public postService: PostService) {}
 }

@@ -2,8 +2,15 @@
 
 @import "./override-bootstrap-variables.scss";
 @import '~bootstrap/scss/bootstrap';
-@import './highlightjs-dracula-them.scss';
+/* include CSS for prism toolbar */
+@import '~prismjs/plugins/toolbar/prism-toolbar.css';
+/* check node_modules/prismjs/themes/ for the available themes */
+@import '~prismjs/themes/prism-tomorrow.css';
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.15rem;
 }

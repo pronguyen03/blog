@@ -2,7 +2,9 @@
     <img *ngIf="post?.image" class="card-img-top" [src]="post.image">
     <hr>
     <div class="card-body">
-        <h3 class="card-title text-primary">{{post?.title}}</h3>
+        <h3 class="card-title text-primary">
+            <a [routerLink]="post.route">{{post?.title}}</a>
+        </h3>
         <p class="card-text text-secondary">{{post?.description}}</p>
         <div>
             <a [routerLink]="post.route" class="btn btn-primary float-right mr-3">Xem thêm &rarr;</a>
