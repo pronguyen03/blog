@@ -18,7 +18,10 @@
                         (click)="isMenuCollapsed = !isMenuCollapsed" 
                         class="nav-link" 
                         routerLink="{{m.ROUTE}}"
-                        >{{m.NAME}}</a>
+                        >
+                        <fa-icon *ngIf="m.ICON" [icon]="m.ICON" size="1x"></fa-icon>
+                        {{m.NAME}}
+                    </a>
                 </li>
             </ul>
         </div>

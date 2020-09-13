@@ -1,9 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ScullyRoute } from '@scullyio/ng-lib';
-import { Observable } from 'rxjs';
-import { take } from 'rxjs/operators';
-import { SITE_CONFIG } from 'src/app/constants';
-import { RouteService, SEOService } from 'src/app/services';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-blog-post',

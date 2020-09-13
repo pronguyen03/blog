@@ -1,18 +1,7 @@
 <app-blog-navigation></app-blog-navigation>
 
 <div class="container mt-4" id="container">
-    <div class="row">
-        <!-- Blog Entries Column -->
-        <div class="col-md-8">
-            <router-outlet></router-outlet>
-        </div>
-
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-            <app-blog-search></app-blog-search>
-            <app-blog-categories></app-blog-categories>
-        </div>
-    </div>
+    <router-outlet></router-outlet>
 </div>
 
 <app-blog-footer></app-blog-footer>

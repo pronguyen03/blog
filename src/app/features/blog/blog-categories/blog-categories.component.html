@@ -1,15 +1,16 @@
 <div class="card my-4">
-    <h5 class="card-header">Categories</h5>
+    <h5 class="card-header text-secondary">Danh mục</h5>
     <div class="card-body">
         <div class="row">
             <div class="col-lg-12">
                 <ul class="list-unstyled mb-0">
                     <li *ngFor="let c of CATEGORIES">
+                        <!--TODO: add last param on url-->
                         <a 
                             routerLinkActive="active"  
-                            [routerLinkActiveOptions]="{exact:true}"
+                            [routerLinkActiveOptions]="{exact:c.KEY===''}"
                             routerLink="/blog"
-                            [queryParams]="c.KEY ? {c: c.KEY}:null"
+                            [queryParams]="getFullQuery(c)"
                             >{{c.NAME}}</a>
                     </li>
                 </ul>

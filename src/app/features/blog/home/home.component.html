@@ -1,14 +1,29 @@
-<div class="card mb-4">
-    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-    <div class="card-body">
-        <h3 class="card-title text-primary">Post Title</h3>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid
-            atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero
-            voluptate voluptatibus possimus, veniam magni quis!</p>
-        <a href="#" class="btn btn-primary">Read More &rarr;</a>
+<div class="row">
+    <!-- Blog Entries Column -->
+    <div class="col-md-8">
+        <h4 class="text-secondary">
+            <ng-container *ngIf="(postService.searchTerm$ | async) as searchTerm">
+                Kết quả tìm kiếm của: <span class="text-primary">{{searchTerm}}</span>. 
+            </ng-container>
+
+            <ng-container *ngIf="(postService.category$ | async) as category">
+                <ng-container *ngIf="category?.KEY">
+                    Trong danh mục: <span class="text-primary">{{category?.NAME}}</span>.
+                </ng-container> 
+            </ng-container>
+        </h4>
+    
+    <app-post-item
+        *ngFor="let p of postService.posts"
+        [post]="p"
+        ></app-post-item>
     </div>
-    <div class="card-footer text-muted">
-        Posted on January 1, 2020 by
-        <a href="#">Start Bootstrap</a>
+
+    <!-- Sidebar Widgets Column -->
+    <div class="col-md-4">
+        <app-blog-search></app-blog-search>
+        <app-blog-categories></app-blog-categories>
     </div>
 </div>
+
+

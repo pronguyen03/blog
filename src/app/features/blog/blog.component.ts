@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { MENUS, SITE_CONFIG } from '../../constants';
+import { Component } from '@angular/core';
 import { SEOService } from '../../services';
 
 @Component({
@@ -7,15 +6,8 @@ import { SEOService } from '../../services';
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss']
 })
-export class BlogComponent implements OnInit {
-  SITE_CONFIG = SITE_CONFIG
-  MENUS = MENUS
-
+export class BlogComponent {
   constructor(seoService: SEOService) { 
     seoService.doSEO()
   }
-
-  ngOnInit(): void {
-  }
-
 }

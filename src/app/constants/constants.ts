@@ -1,3 +1,5 @@
+import { Category } from '../models'
+
 export const CATEGORY = {
     ALL: '',
     UNCATEGORIZED: 'uncategorized',
@@ -9,7 +11,7 @@ export const CATEGORY = {
     ANGULAR: 'angular',
 }
 
-export const CATEGORIES = [
+export const CATEGORIES: Category[] = [
     {KEY: CATEGORY.ALL, NAME: 'Tất cả'},
     {KEY: CATEGORY.SELF_LEARNING, NAME: 'Hướng dẫn tự học lập trình'},
     {KEY: CATEGORY.FOUNDATION, NAME: 'Nhập môn lập trình'},
@@ -21,6 +23,6 @@ export const CATEGORIES = [
 ]
 
 export const MENUS = [
-    {NAME: 'Trang chủ', ROUTE: '/blog'},
+    {NAME: 'Trang chủ', ROUTE: '/blog', ICON: ['fas', 'home']},
     {NAME: 'Giới thiệu', ROUTE: '/blog/about'},
 ]
