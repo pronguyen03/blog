@@ -1,16 +1,14 @@
 <div class="card my-4">
-    <h5 class="card-header text-secondary">Danh mục</h5>
+    <h5 class="card-header text-secondary">Bài viết liên quan</h5>
     <div class="card-body">
         <div class="row">
             <div class="col-lg-12">
                 <ul class="list-unstyled mb-0">
-                    <li *ngFor="let c of CATEGORIES">
+                    <li *ngFor="let p of relatedPosts">
                         <a 
                             routerLinkActive="active"  
-                            [routerLinkActiveOptions]="{exact:c.KEY===''}"
-                            routerLink="/blog"
-                            [queryParams]="getFullQuery(c)"
-                            >{{c.NAME}}</a>
+                            [routerLink]="p?.route"
+                            >{{p?.title}}</a>
                     </li>
                 </ul>
             </div>

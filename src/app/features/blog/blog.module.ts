@@ -14,6 +14,8 @@ import { FormsModule } from '@angular/forms';
 import { BlogSearchComponent } from './blog-search/blog-search.component';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faHome, faSearch, faUser } from '@fortawesome/free-solid-svg-icons';
+import { FiltersInfoComponent } from './filters-info/filters-info.component';
+import { RelatedPostsComponent } from './related-posts/related-posts.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { faHome, faSearch, faUser } from '@fortawesome/free-solid-svg-icons';
     BlogCategoriesComponent,
     BlogAboutComponent,
     BlogPostComponent,
-    PostItemComponent
+    PostItemComponent,
+    FiltersInfoComponent,
+    RelatedPostsComponent
   ],
   imports: [
     CommonModule,

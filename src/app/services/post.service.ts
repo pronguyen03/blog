@@ -14,7 +14,11 @@ export class PostService {
   private filters$ = combineLatest([this.searchTerm, this.category])
   private _currentPost: Post
   private _posts: Post[] = []
+  private _relatedPosts: Post[] = []
 
+  get relatedPosts(): Post[] {
+    return this._relatedPosts
+  }
   get curentPost(): Post {
     return this._currentPost
   }
@@ -52,7 +56,25 @@ export class PostService {
 
   private getCurrentPost() {
     this.scullyRoutes.getCurrent()
-      .subscribe(post => this._currentPost = post as Post)
+      .subscribe(post => {
+        this._currentPost = post as Post
+        this.setRelatedPostsToCurrentPost(post as Post)
+      })
+  }
+
+  private setRelatedPostsToCurrentPost(currentPost: Post) {
+    let cats = currentPost?.categories
+      .split(',')
+      .map(c => c.trim().toLowerCase()) || []
+
+    this._relatedPosts = this.posts.filter(p => {
+      for (let i = 0; i < cats.length; i++) {
+        if (p?.categories.toLowerCase().includes(cats[i])) {
+          return true
+        }
+      }
+      return false
+    })
   }
 
   private filterPosts(posts: Post[], categorykey?: string, searchTerm?: string): Post[] {
