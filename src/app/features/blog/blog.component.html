@@ -1,7 +1,30 @@
 <app-blog-navigation></app-blog-navigation>
 
 <div class="container mt-4" id="container">
-    <router-outlet></router-outlet>
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+            <h4 class="text-secondary">
+                <ng-container *ngIf="(postService.searchTerm$ | async) as searchTerm">
+                    Kết quả tìm kiếm của: <span class="text-primary">{{searchTerm}}</span>. 
+                </ng-container>
+    
+                <ng-container *ngIf="(postService.category$ | async) as category">
+                    <ng-container *ngIf="category?.KEY">
+                        Trong danh mục: <span class="text-primary">{{category?.NAME}}</span>.
+                    </ng-container> 
+                </ng-container>
+            </h4>
+        
+            <router-outlet></router-outlet>
+        </div>
+    
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+            <app-blog-search></app-blog-search>
+            <app-blog-categories></app-blog-categories>
+        </div>
+    </div>
 </div>
 
 <app-blog-footer></app-blog-footer>

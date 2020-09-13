@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { SEOService } from '../../services';
+import { ActivatedRoute } from '@angular/router';
+import { CATEGORIES } from 'src/app/constants';
+import { Category } from 'src/app/models';
+import { PostService, SEOService } from '../../services';
 
 @Component({
   selector: 'app-blog',
@@ -7,7 +10,29 @@ import { SEOService } from '../../services';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent {
-  constructor(seoService: SEOService) { 
+  constructor(
+    public postService: PostService,
+    route: ActivatedRoute,
+    seoService: SEOService
+  ) { 
     seoService.doSEO()
+
+    route.queryParamMap.subscribe(qM => {
+      let cat = this.getCategory(qM.get('c'))
+      let searchTerm = qM.get('s')
+
+      if (cat) {
+        postService.filterByCategory(cat)
+      }
+
+      postService.search(searchTerm || '')
+    })
+  }
+
+  private getCategory(key: string): Category|null {
+    let filteredCats = CATEGORIES.filter(
+      c => c.KEY.toLowerCase() == (key || '').toLowerCase()
+    )
+    return filteredCats.length ? filteredCats[0]:null
   }
 }
