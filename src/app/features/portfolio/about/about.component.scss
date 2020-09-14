@@ -5,6 +5,10 @@ $orange: #bd5d38;
 // Override Bootstrap default state colors
 $primary: $orange;
 
+h1 {
+    font-size: 4rem;
+}
+
 section.resume-section {
     display: flex;
     align-items: center;
@@ -17,9 +21,15 @@ section.resume-section {
         width: 100%;
     }
 }
+
+
 @include media-breakpoint-up(md) {
     section.resume-section {
         min-height: 100vh;
+    }
+
+    h1 {
+        font-size: 6rem;
     }
 }
 
@@ -37,13 +47,13 @@ section.resume-section {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        height: 3.5rem;
-        width: 3.5rem;
+        height: 3rem;
+        width: 3rem;
         background-color: $gray-700;
         color: $white;
         border-radius: 100%;
-        font-size: 1.5rem;
-        margin-right: 1.5rem;
+        font-size: 1.2rem;
+        margin-right: 0.7rem;
         &:last-child {
             margin-right: 0;
         }
