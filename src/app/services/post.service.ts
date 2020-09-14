@@ -34,18 +34,21 @@ export class PostService {
   }
 
   filterByCategory(category: Category) {
+    console.log('filterByCategory', category)
     this.category.next(category)
   }
 
   search(searchTerm: string) {
+    console.log('search', searchTerm)
     this.searchTerm.next(searchTerm)
   }
 
   private fetchPosts() {
     this.filters$.pipe(
       switchMap(([searchTerm, category]) => {
+        console.log('fetchPosts', searchTerm, category)
         return this.scullyRoutes.available$.pipe(
-          map((routes: Post[]) => this.filterPosts(routes, category.KEY, searchTerm))
+          map((routes: Post[]) => this.filterPosts(routes, category?.KEY || '', searchTerm))
         )
       })
     )
@@ -105,6 +108,8 @@ export class PostService {
         return _title.includes(_searchTerm) || _description.includes(_searchTerm)
       })
     }
+
+    console.log('filterPosts', categorykey, searchTerm, results)
 
     return results.sort((rA, rB) => {
       return new Date(rB.date).getTime() - new Date(rA.date).getTime()
