@@ -1,5 +1,4 @@
 export interface Category {
-    KEY: string
-    NAME: string
-    ICON?: string
+    key: string
+    displayName: string
 }

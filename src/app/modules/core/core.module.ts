@@ -6,6 +6,7 @@ import {
   Optional, 
   SkipSelf 
 } from '@angular/core';
+import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
 import { NgxLogglyModule } from 'ngx-loggly-logger';
 
 import { 
@@ -42,7 +43,8 @@ export const CROSS_CUTTING = [
   declarations: [],
   imports: [
     CommonModule,
-    NgxLogglyModule.forRoot()
+    NgxLogglyModule.forRoot(),
+    NgxGoogleAnalyticsModule.forRoot('UA-57017162-2')
   ],
   providers: [
     ...CROSS_CUTTING

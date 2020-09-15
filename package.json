@@ -36,6 +36,7 @@
     "@scullyio/ng-lib": "^1.0.0-beta.1",
     "@scullyio/scully": "^1.0.0-beta.5",
     "bootstrap": "^4.5.0",
+    "ngx-google-analytics": "^9.0.1",
     "ngx-loggly-logger": "^10.0.0",
     "rxjs": "~6.6.3",
     "scully-plugin-minify-html": "^3.2.0",

@@ -1,5 +1,10 @@
 # ngx-scully-blog
 
+TODO: 
+- Blog post: how to use
+- Post to angular
+- Document install invironment for angular 
+
 A minimal blogging app using [Angular](https://angular.io/) and [Scully](https://scully.io) with basic supports for search engine optimization (SEO).
 
 You can easily clone the project to your machine, update the configs to make it your own, start writing and deploy to anywhere you want to show everyone.
