@@ -1,0 +1,8 @@
+{
+    "applicationName": "Nhan Nguyen Da Coder",
+    "debug": true,
+    "logging": {
+        "sendToConsole": true,
+        "logglyToken": "8d9de979-856a-4f21-9b46-6a2beff94100"
+    }
+}

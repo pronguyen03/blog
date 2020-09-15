@@ -55,6 +55,9 @@
               "src/styles/styles.scss"
             ],
             "scripts": [
+            ],
+            "allowedCommonJsDependencies": [
+              "ng2-cookies"
             ]
           },
           "configurations": {

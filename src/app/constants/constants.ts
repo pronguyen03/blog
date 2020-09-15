@@ -23,6 +23,8 @@ export const CATEGORIES: Category[] = [
 ]
 
 export const MENUS = [
-    {NAME: 'Home', ROUTE: '/blog', ICON: ['fas', 'home']},
-    {NAME: 'About', ROUTE: '/blog/about'},
+    {NAME: 'Trang chủ', ROUTE: '/blog', ICON: ['fas', 'home']},
+    {NAME: 'Giới thiệu', ROUTE: '/blog/about'},
 ]
+
+export const CONFIG_FILE = 'assets/config.json'

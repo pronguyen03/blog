@@ -22,4 +22,5 @@ npm run scully
 Serve Scully:
 npm run scully:serve
 
-ng build --prod --stats-json && npm run scully && npm run scully:serve
+ng build --prod && npm run scully && npm run scully:serve
+ng build && npm run scully && npm run scully:serve

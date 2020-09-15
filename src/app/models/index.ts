@@ -1,3 +1,5 @@
 export * from './post'
 export * from './seo-data'
 export * from './category'
+export * from './i-configuration'
+export * from './i-logging-data'

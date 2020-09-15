@@ -7,8 +7,6 @@ import { PostService } from '../../services';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent {
-  constructor(public postService: PostService ) { 
-
-  }
+  constructor(public postService: PostService ) {}
 
 }
