@@ -7,9 +7,7 @@ import { LogWriter } from './log-writer';
 /**
  * Use this writer to log information to the browser console.
  */
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class ConsoleWriter extends LogWriter {
     constructor(
         loggingService: ILoggingService,

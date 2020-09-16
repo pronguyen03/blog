@@ -1,6 +1,6 @@
 import { ScullyRoute } from '@scullyio/ng-lib';
 
-export interface Post extends ScullyRoute {
+export interface IPost extends ScullyRoute {
     descriptiontitle: string
     description: string
     keywords?: string

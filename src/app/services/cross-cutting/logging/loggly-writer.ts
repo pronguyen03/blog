@@ -10,9 +10,7 @@ import { environment } from 'src/environments/environment';
 /**
  * Use this writer to log information to the logentries server.
  */
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class LogglyWriter extends LogWriter {
 
     constructor(
@@ -31,7 +29,6 @@ export class LogglyWriter extends LogWriter {
         try {
             this.loggly.push({
                 logglyKey: this.configs.logglyToken,
-                sendConsoleErrors: this.configs.sendToConsole,
                 tag: 'nhannguyendacoder'
             });
         } catch (error) {
