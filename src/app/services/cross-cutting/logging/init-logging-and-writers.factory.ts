@@ -7,7 +7,7 @@ export function InitLoggingAndWriters(
   consoleWriter: ConsoleWriter, 
   logglyWriter: LogglyWriter
 ) {
-  // console.info("InitLoggingAndWriters")
+  console.info("InitLoggingAndWriters")
   return () => {
     return consoleWriter;
   };

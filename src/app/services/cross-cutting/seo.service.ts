@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { BLOG_INFO, ROOT_SITE_URL } from '../../../configuration';
-import { ISEOData } from '../models';
+import { BLOG_INFO, ROOT_SITE_URL } from '../../../../configuration';
+import { ISEOData } from '../../models';
 
 @Injectable({
     providedIn: 'root'
@@ -37,7 +37,10 @@ export class SEOService {
         this.meta.updateTag({ property: 'og:title', content: meta.title });
         this.meta.updateTag({ name: 'keywords', content: meta.keywords });
         this.meta.updateTag({ property: 'og:description', content: meta.description });
-        this.meta.updateTag({ property: 'og:image', content: meta.image });
+        this.meta.updateTag({ 
+            property: 'og:image', 
+            content: meta.image ? this.rootUrl + '/' + meta.image : '' 
+        });
         this.meta.updateTag({ property: 'og:url', content: this.rootUrl + meta.route });
     }
 

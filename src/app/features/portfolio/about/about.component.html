@@ -10,7 +10,7 @@
             {{introduction}}
         </p>
         <p class="lead mb-5" *ngIf="email">
-            <strong>Contact for work: </strong> 
+            <strong>{{contactText}}: </strong> 
             <a [href]="'mailto:'+email">{{email}}</a>
         </p>
 

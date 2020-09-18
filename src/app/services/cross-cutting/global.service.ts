@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class GlobalService {
   isReadingAPost: boolean
+  isReadingAPage: boolean
 
   constructor() { }
 }

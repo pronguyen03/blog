@@ -1,9 +1,22 @@
-export const SEARCH_FOR_TEXT = 'Kết quả tìm kiếm của'
-export const CATEGORY_FILTER_TEXT = 'Trong danh mục'
-export const SEE_MORE_TEXT = 'Xem thêm'
+/**
+ * Texts in the site you can config
+ */
+
+
+export const SEARCH_FOR_TEXT = 'Search results for'
+export const CATEGORY_FILTER_TEXT = 'In category'
+export const SEE_MORE_TEXT = 'See more'
+export const CONTACT_TEXT = 'Contact for work'
+
 /**
  * Title of categories section in your blog.
  */
-export const CATEGORIES_SECTION_TITLE = 'Danh mục'
-export const RELATED_POSTS_SECTION_TITLE = 'Bài viết liên quan'
-export const SEARCH_SECTION_TITLE = 'Tìm kiếm'
+export const CATEGORIES_SECTION_TITLE = 'Categories'
+/**
+ * Title of related posts in your blog.
+ */
+export const RELATED_POSTS_SECTION_TITLE = 'Related posts'
+/**
+ * Title of search section in your blog.
+ */
+export const SEARCH_SECTION_TITLE = 'Search'

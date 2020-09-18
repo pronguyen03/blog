@@ -15,7 +15,9 @@ export class BlogHomeComponent {
     route: ActivatedRoute,
     seoService: SEOService
   ) { 
-    seoService.doSEO({route: '/blog'})
+    seoService.doSEO({
+      route: '/blog',
+    })
 
     route.queryParamMap.subscribe(qM => {
       let cat = this.getCategory(qM.get('c'))

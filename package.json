@@ -8,12 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "bundle:report": "source-map-explorer dist/ngx-scully-blog/**/*.js",
     "scully": "scully",
     "scully:serve": "scully serve",
-    "scully:preview": "ng build && npm run scully && npm run scully:serve",
-    "scully:preview-prod": "ng build --prod && npm run scully && npm run scully:serve",
-    "scully:deploy": "ng build --prod && npm run scully && firebase deploy",
-    "bundle:report": "source-map-explorer dist/ngx-scully-blog/**/*.js"
+    "scully:preview": "ng build --prod && npm run scully && npm run scully:serve",
+    "scully:deploy": "ng build --prod && npm run scully && firebase deploy"
   },
   "private": true,
   "dependencies": {

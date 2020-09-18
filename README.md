@@ -1,13 +1,9 @@
 # ngx-scully-blog
 
-TODO: 
-- Blog post: how to use
-- Post to angular
-- Document install invironment for angular 
-- from git clone, npm i ....
-- one blog post title: create a blog for free
-- add credit to startbootstrap
-- add images to blog folder
+sitemap
+https://startbootstrap.com/themes/resume
+https://startbootstrap.com/templates/blog-home
+http://startbootstrap.com/templates/blog-post
 
 A minimal blogging app using [Angular](https://angular.io/) and [Scully](https://scully.io) with basic supports for search engine optimization (SEO).
 
@@ -93,6 +89,29 @@ File name of a blog post:
 
 For any futher questions, just creat a new issue. Thank you.
 
-TODO: 
-- [ ] fix overflow on mobile browser
-- [ ] format code blocks
+New Angular project in minial mode: 
+ng new ngx-scully-blog --minimal
+
+Add Scully to the project:
+ng add @scullyio/init
+
+Init a Scully blog
+ng g @scullyio/init:blog
+
+Add new blog post
+ng g @scullyio/init:post --name="blog name"
+
+Scan for unhandled routes:
+npm run scully -- --scanRoutes
+
+Build Angular: 
+ng build --stats-json
+
+Run Scully:
+npm run scully
+
+Serve Scully:
+npm run scully:serve
+
+ng build --prod && npm run scully && npm run scully:serve
+ng build && npm run scully && npm run scully:serve

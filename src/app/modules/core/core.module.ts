@@ -6,16 +6,18 @@ import {
   Optional,
   SkipSelf
 } from '@angular/core';
-import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 import { NgxLogglyModule } from 'ngx-loggly-logger';
-import { ConsoleWriter, ErrorHandlingService, InitLoggingAndWriters, LoggingService, LogglyWriter } from 'src/app/services';
+import { ConsoleWriter, ErrorHandlingService, FacebookService, InitLoggingAndWriters, LoggingService, LogglyWriter } from 'src/app/services';
+import { InitFacebookPixel } from 'src/app/services/cross-cutting/init-facebook-pixel.factory';
 import { GOOGLE_ANALYTICS_TRACKING_ID } from '../../../../configuration';
 
 export const CORE_IMPORTS = [
   NgxLogglyModule.forRoot(),
   NgxGoogleAnalyticsModule.forRoot(
     GOOGLE_ANALYTICS_TRACKING_ID
-  )
+  ),
+  NgxGoogleAnalyticsRouterModule
 ]
 
 export const CORE_PROVIDERS = [
@@ -24,6 +26,12 @@ export const CORE_PROVIDERS = [
     deps: [LoggingService, ConsoleWriter, LogglyWriter],
     multi: true,
     useFactory: InitLoggingAndWriters
+  },
+  {
+    provide: APP_INITIALIZER,
+    deps: [FacebookService],
+    multi: true,
+    useFactory: InitFacebookPixel
   },
   {
     provide: ErrorHandler,

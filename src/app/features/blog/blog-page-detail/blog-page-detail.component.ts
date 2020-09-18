@@ -1,5 +1,7 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { take } from 'rxjs/operators';
+import { GlobalService, PostService, SEOService } from 'src/app/services';
 
 declare var ng: any;
 
@@ -10,14 +12,21 @@ declare var ng: any;
   preserveWhitespaces: true,
   encapsulation: ViewEncapsulation.Emulated
 })
-export class BlogPageDetailComponent implements OnInit {
+export class BlogPageDetailComponent {
 
   constructor(
     private router: Router, 
     private route: ActivatedRoute, 
-  ) { }
-
-  ngOnInit(): void {
+    public globalService: GlobalService,
+    seoService: SEOService, 
+    postService: PostService,
+  ) { 
+    globalService.isReadingAPage = true
+    postService.currentPost.pipe(take(1))
+      .subscribe(currentPost => seoService.doSEO(currentPost))
   }
 
+  ngOnDestroy() {
+    this.globalService.isReadingAPage = false
+  }
 }

@@ -23,7 +23,7 @@
             <app-blog-search></app-blog-search>
             <!--https://github.com/scullyio/scully/issues/920#issuecomment-692111016-->
             <app-blog-categories 
-                *ngIf="!globalService.isReadingAPost"
+                *ngIf="!globalService.isReadingAPage && !globalService.isReadingAPost"
                 ></app-blog-categories>
         </div>
     </div>

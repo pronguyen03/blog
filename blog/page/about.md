@@ -1,10 +1,9 @@
 ---
 title: About me
-description: About me.
+description: Tell people about yourself.
 published: true
-keywords: About me
-categories: angular
+keywords: your keywords
 date: 2020-08-21
-image: https://nhannguyendacoder.com/assets/images/angular-custom-error-handler/custom-error-handler.png
+image: assets/images/about-img.png
 ---
-# About
+# About me

@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {
+  CONTACT_TEXT,
   EMAIL, 
   FACEBOOK_URL,
   FIRST_NAME,
@@ -26,4 +27,5 @@ export class AboutComponent {
   githubUrl = GITHUB_URL
   twitterUrl = TWITTER_URL
   linkedinUrl = LINKEDIN_URL
+  contactText = CONTACT_TEXT
 }

@@ -4,11 +4,13 @@ description: console.log('Hello World')
 published: true
 keywords: hello world
 categories: uncategorized
-date: 2020-06-13
-image: https://firebasestorage.googleapis.com/v0/b/nhannguyendacoder.appspot.com/o/images%2F51286890_776034022777268_3822202400140165120_o.jpg?alt=media&token=7a037859-bb42-459b-8f83-b9eae0553f50
+date: 2020-09-17
+image: assets/images/uncategorized-hello-world/hello-world.jpg
 ---
 
 # Hello World
+
+![hello world image](assets/images/uncategorized-hello-world/hello-world.jpg)
 
 ```html
 <!DOCTYPE html>

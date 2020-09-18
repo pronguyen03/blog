@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PostService, SEOService } from 'src/app/services';
-import { GlobalService } from 'src/app/services/global.service';
+import { take } from 'rxjs/operators';
+import { GlobalService, PostService, SEOService } from 'src/app/services';
 
 
 declare var ng: any;
@@ -21,8 +21,10 @@ export class BlogPostComponent {
     private router: Router, 
     private route: ActivatedRoute, 
   ) {
-    seoService.doSEO(postService.curentPost)
-    this.globalService.isReadingAPost = true
+    postService.currentPost.pipe(take(1))
+      .subscribe(currentPost => seoService.doSEO(currentPost))
+    
+    globalService.isReadingAPost = true
   }
 
   ngOnDestroy() {

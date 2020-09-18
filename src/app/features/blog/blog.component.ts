@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { GlobalService } from 'src/app/services/global.service';
-import { PostService } from '../../services';
+import { GlobalService, PostService } from '../../services';
 
 @Component({
   selector: 'app-blog',
