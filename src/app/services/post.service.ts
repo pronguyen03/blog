@@ -3,26 +3,26 @@ import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { BehaviorSubject, combineLatest } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { StringHelper } from '../helpers';
-import { Category, Post } from '../models';
+import { ICategory, IPost } from '../models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
   private searchTerm = new BehaviorSubject<string>('')
-  private category = new BehaviorSubject<Category|null>(null)
+  private category = new BehaviorSubject<ICategory|null>(null)
   private filters$ = combineLatest([this.searchTerm, this.category])
-  private _currentPost: Post
-  private _posts: Post[] = []
-  private _relatedPosts: Post[] = []
+  private _currentPost: IPost
+  private _posts: IPost[] = []
+  private _relatedPosts: IPost[] = []
 
-  get relatedPosts(): Post[] {
+  get relatedPosts(): IPost[] {
     return this._relatedPosts
   }
-  get curentPost(): Post {
+  get curentPost(): IPost {
     return this._currentPost
   }
-  get posts(): Post[] {
+  get posts(): IPost[] {
     return this._posts
   }
   readonly category$ = this.category.asObservable()
@@ -33,22 +33,19 @@ export class PostService {
     this.fetchPosts()
   }
 
-  filterByCategory(category: Category) {
-    console.log('filterByCategory', category)
+  filterByCategory(category: ICategory) {
     this.category.next(category)
   }
 
   search(searchTerm: string) {
-    console.log('search', searchTerm)
     this.searchTerm.next(searchTerm)
   }
 
   private fetchPosts() {
     this.filters$.pipe(
       switchMap(([searchTerm, category]) => {
-        console.log('fetchPosts', searchTerm, category)
         return this.scullyRoutes.available$.pipe(
-          map((routes: Post[]) => this.filterPosts(routes, category?.KEY || '', searchTerm))
+          map((routes: IPost[]) => this.filterPosts(routes, category?.key || '', searchTerm))
         )
       })
     )
@@ -60,12 +57,12 @@ export class PostService {
   private getCurrentPost() {
     this.scullyRoutes.getCurrent()
       .subscribe(post => {
-        this._currentPost = post as Post
-        this.setRelatedPostsToCurrentPost(post as Post)
+        this._currentPost = post as IPost
+        this.setRelatedPostsToCurrentPost(post as IPost)
       })
   }
 
-  private setRelatedPostsToCurrentPost(currentPost: Post) {
+  private setRelatedPostsToCurrentPost(currentPost: IPost) {
     if (!currentPost || !currentPost.categories) {
       return
     }
@@ -84,7 +81,7 @@ export class PostService {
     })
   }
 
-  private filterPosts(posts: Post[], categorykey?: string, searchTerm?: string): Post[] {
+  private filterPosts(posts: IPost[], categorykey?: string, searchTerm?: string): IPost[] {
     let results = posts
       .filter(
         route => route.route.includes('/blog') && route.published && route.title && route.description
@@ -108,8 +105,6 @@ export class PostService {
         return _title.includes(_searchTerm) || _description.includes(_searchTerm)
       })
     }
-
-    console.log('filterPosts', categorykey, searchTerm, results)
 
     return results.sort((rA, rB) => {
       return new Date(rB.date).getTime() - new Date(rA.date).getTime()

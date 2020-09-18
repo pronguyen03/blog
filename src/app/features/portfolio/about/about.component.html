@@ -1,24 +1,24 @@
 <section class="resume-section" id="about">
     <div class="resume-section-content">
         <h1 class="mb-0">
-            Nhan <span class="text-primary">Nguyen</span>
+            {{firstName}} <span class="text-primary">{{lastName}}</span>
         </h1>
         <div class="subheading mb-5">
-            {{SITE_CONFIG.JOB_TITLE}} 
+            {{jobTitle}} 
         </div>
         <p class="lead">
-            {{SITE_CONFIG.PORTFOLIO_DESC}}
+            {{introduction}}
         </p>
-        <p class="lead mb-5">
+        <p class="lead mb-5" *ngIf="email">
             <strong>Contact for work: </strong> 
-            <a [href]="'mailto:'+SITE_CONFIG.EMAIL">{{SITE_CONFIG.EMAIL}}</a>
+            <a [href]="'mailto:'+email">{{email}}</a>
         </p>
 
         <div class="social-icons">
             <a 
                 title="My Blog"
                 class="social-icon" 
-                routerLink="blog"
+                routerLink="/blog"
                 >
                 <fa-icon [icon]="['fab', 'blogger-b']" size="1x"></fa-icon>
             </a>
@@ -26,7 +26,8 @@
                 title="LinkedIn"
                 class="social-icon" 
                 target="_blank" 
-                [href]="SITE_CONFIG.LINKEDIN"
+                [href]="linkedinUrl"
+                *ngIf="linkedinUrl"
                 >
                 <fa-icon [icon]="['fab', 'linkedin-in']" size="1x"></fa-icon>
             </a>
@@ -34,7 +35,8 @@
                 title="Github"
                 class="social-icon" 
                 target="_blank" 
-                [href]="SITE_CONFIG.GITHUB"
+                [href]="githubUrl"
+                *ngIf="githubUrl"
                 >
                 <fa-icon [icon]="['fab', 'github']" size="1x"></fa-icon>
             </a>
@@ -42,7 +44,8 @@
                 title="Facebook Profile"
                 class="social-icon" 
                 target="_blank" 
-                [href]="SITE_CONFIG.PROFILE"
+                [href]="facebookUrl"
+                *ngIf="facebookUrl"
                 > 
                 <fa-icon [icon]="['fab', 'facebook-f']" size="1x"></fa-icon>
             </a>
@@ -50,7 +53,8 @@
                 title="Twitter"
                 class="social-icon" 
                 target="_blank" 
-                [href]="SITE_CONFIG.TWITTER"
+                [href]="twitterUrl"
+                *ngIf="twitterUrl"
                 >
                 <fa-icon [icon]="['fab', 'twitter']" size="1x"></fa-icon>
             </a>

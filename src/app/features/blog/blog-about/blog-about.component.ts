@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SITE_CONFIG } from 'src/app/constants';
 
 @Component({
   selector: 'app-blog-about',
@@ -7,7 +6,6 @@ import { SITE_CONFIG } from 'src/app/constants';
   styleUrls: ['./blog-about.component.scss']
 })
 export class BlogAboutComponent implements OnInit {
-  SITE_CONFIG = SITE_CONFIG
 
   constructor() { }
 

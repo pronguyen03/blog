@@ -1,24 +1,21 @@
-import { Injectable, Optional } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { LogglyService } from 'ngx-loggly-logger';
-import { LogWriter } from './log-writer';
-import { ILoggingService } from '../i-logging.service';
-import { IConfigurationService } from '../i-configuration.service';
 import { ILoggingFullData } from 'src/app/models';
 import { environment } from 'src/environments/environment';
+import { LogWriter } from './log-writer';
+import { LoggingService } from './logging.service';
 
 
 /**
  * Use this writer to log information to the logentries server.
  */
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class LogglyWriter extends LogWriter {
 
-    constructor(
-        loggingService: ILoggingService,
-        private loggly: LogglyService, 
-        @Optional() configuration: IConfigurationService
-    ) {
-        super(loggingService, configuration)
+    constructor(loggingService: LoggingService, private loggly: LogglyService) {
+        super(loggingService)
         // console.info('Init LogentriesWriter')
     }
 
@@ -51,13 +48,7 @@ export class LogglyWriter extends LogWriter {
             ...this.targetEntry,
             timestamp: new Date(this.targetEntry?.timestamp).toISOString(),
         }
-        if (this.targetEntry.level === 'debug') {
-            if (this.debug) {
-                this.loggly.push(log)
-            }
-        } else {
-            this.loggly.push(log);
-        }
+        this.loggly.push(log);
     }
 
     /**

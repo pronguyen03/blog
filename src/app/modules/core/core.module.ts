@@ -1,36 +1,36 @@
 import { CommonModule } from '@angular/common';
-import { 
-  APP_INITIALIZER, 
-  ErrorHandler, 
-  NgModule, 
-  Optional, 
-  SkipSelf 
+import {
+  APP_INITIALIZER,
+  ErrorHandler,
+  NgModule,
+  Optional,
+  SkipSelf
 } from '@angular/core';
 import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
 import { NgxLogglyModule } from 'ngx-loggly-logger';
+import { ConsoleWriter, ErrorHandlingService, InitLoggingAndWriters, LoggingService, LogglyWriter } from 'src/app/services';
+import { GOOGLE_ANALYTICS_TRACKING_ID, LOGGLY_TOKEN } from '../../../../configuration';
 
-import { 
-  ConsoleWriter, 
-  ErrorHandlingService, 
-  IConfigurationService, 
-  ILoggingService, 
-  InitLoggingAndWriters, 
-  LogglyWriter, 
-  PreloadConfigFactory 
-} from 'src/app/services';
+export const CORE_IMPORTS = []
+    
+if (LOGGLY_TOKEN) {
+  CORE_IMPORTS.push(NgxLogglyModule.forRoot())
+}
 
-export const CROSS_CUTTING = [
+if (GOOGLE_ANALYTICS_TRACKING_ID) {
+  CORE_IMPORTS.push(
+    NgxGoogleAnalyticsModule.forRoot(
+      GOOGLE_ANALYTICS_TRACKING_ID
+    )
+  )
+}
+
+export const CORE_PROVIDERS = [
   {
     provide: APP_INITIALIZER,
-    deps: [ILoggingService, ConsoleWriter, LogglyWriter],
+    deps: [LoggingService, ConsoleWriter, LogglyWriter],
     multi: true,
     useFactory: InitLoggingAndWriters
-  },
-  {
-    provide: APP_INITIALIZER,
-    deps: [IConfigurationService],
-    multi: true,
-    useFactory: PreloadConfigFactory
   },
   {
     provide: ErrorHandler,
@@ -43,11 +43,10 @@ export const CROSS_CUTTING = [
   declarations: [],
   imports: [
     CommonModule,
-    NgxLogglyModule.forRoot(),
-    NgxGoogleAnalyticsModule.forRoot('UA-57017162-2')
+    ...CORE_IMPORTS
   ],
   providers: [
-    ...CROSS_CUTTING
+    ...CORE_PROVIDERS
   ]
 })
 export class CoreModule { 

@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Post } from 'src/app/models';
+import { IPost } from 'src/app/models';
+import { SEE_MORE_TEXT } from '../../../../../../configuration';
 
 @Component({
   selector: 'app-blog-post-item',
@@ -8,5 +9,6 @@ import { Post } from 'src/app/models';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BlogPostItemComponent {
-  @Input() post: Post
+  @Input() post: IPost
+  seeMoreText = SEE_MORE_TEXT
 }

@@ -1,39 +1,39 @@
 import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { SITE_CONFIG } from '../constants/site.config';
-import { SEOData } from '../models/seo-data';
-
-/*
- Object.assign(this, data)
-        this.title = this.title || SITE_CONFIG.TITLE
-        this.description = this.description || SITE_CONFIG.DESC
-        this.image = this.image || SITE_CONFIG.IMAGE
-        this.route = this.route || SITE_CONFIG.ROUTE
-        this.keywords = this.keywords || SITE_CONFIG.KEYWORDS
-*/
+import { BLOG_INFO, ROOT_SITE_URL } from '../../../configuration';
+import { ISEOData } from '../models';
 
 @Injectable({
     providedIn: 'root'
 })
 export class SEOService {
-    private rootUrl = SITE_CONFIG.ROOT_URL
+    private rootUrl = ROOT_SITE_URL
     
     constructor(private meta: Meta, private title: Title) {}
 
     /**
-     * Set tittle and meta tags for a web page
+     * Set title and meta tags for a web page
      */
-    doSEO(data?: Partial<SEOData>) {
-        let seoData = new SEOData(data)
+    doSEO(data?: Partial<ISEOData>) {
+        // Default SEO data
+        let seoData: ISEOData = {
+            title: BLOG_INFO.DEFAULT_TITLE,
+            description: BLOG_INFO.DESCRIPTION,
+            image: BLOG_INFO.SHARE_IMAGE,
+            route: '',
+            keywords: BLOG_INFO.KEYWORDS
+        }
+        // Update with provided data
+        Object.assign(seoData, data)
 
         this.setTitle(seoData.title)
         this.setMetaTags(seoData)
     }
 
-    private setMetaTags(meta: SEOData) {
+    private setMetaTags(meta: ISEOData) {
         this.meta.updateTag({ property: 'twitter:card', content: 'summary' });
         this.meta.updateTag({ property: 'og:type', content: 'article' });
-        this.meta.updateTag({ property: 'og:site_name', content: SITE_CONFIG.NAME });
+        this.meta.updateTag({ property: 'og:site_name', content: BLOG_INFO.DEFAULT_TITLE });
         this.meta.updateTag({ property: 'og:title', content: meta.title });
         this.meta.updateTag({ name: 'keywords', content: meta.keywords });
         this.meta.updateTag({ property: 'og:description', content: meta.description });

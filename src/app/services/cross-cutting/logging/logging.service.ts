@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
 import { ILoggingData } from 'src/app/models';
-import { ILoggingService } from './i-logging.service';
 
-@Injectable()
-export class LoggingService implements ILoggingService {
+@Injectable({
+    providedIn: 'root'
+})
+export class LoggingService {
     private logEntriesSubject = new ReplaySubject<ILoggingData>(1)
     logEntries$ = this.logEntriesSubject.asObservable()
 

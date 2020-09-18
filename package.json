@@ -34,7 +34,7 @@
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "@scullyio/init": "^1.0.0",
     "@scullyio/ng-lib": "^1.0.0-beta.1",
-    "@scullyio/scully": "^1.0.0-beta.5",
+    "@scullyio/scully": "^1.0.0-beta.6",
     "bootstrap": "^4.5.0",
     "ngx-google-analytics": "^9.0.1",
     "ngx-loggly-logger": "^10.0.0",

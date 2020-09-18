@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CATEGORIES } from 'src/app/constants';
-import { Category } from 'src/app/models';
+import { CATEGORIES } from '../../../../../configuration';
+import { ICategory } from 'src/app/models';
 import { PostService, SEOService } from 'src/app/services';
 
 @Component({
@@ -15,14 +15,11 @@ export class BlogHomeComponent {
     route: ActivatedRoute,
     seoService: SEOService
   ) { 
-    console.log('BlogHomeComponent constructor')
-    seoService.doSEO()
+    seoService.doSEO({route: '/blog'})
 
     route.queryParamMap.subscribe(qM => {
       let cat = this.getCategory(qM.get('c'))
       let searchTerm = qM.get('s')
-
-      console.log('BlogComponent params changes', cat, searchTerm)
 
       if (cat) {
         postService.filterByCategory(cat)
@@ -32,9 +29,9 @@ export class BlogHomeComponent {
     })
   }
 
-  private getCategory(key: string): Category|null {
+  private getCategory(key: string): ICategory|null {
     let filteredCats = CATEGORIES.filter(
-      c => c.KEY.toLowerCase() == (key || '').toLowerCase()
+      c => c.key.toLowerCase() == (key || '').toLowerCase()
     )
     return filteredCats.length ? filteredCats[0]:null
   }

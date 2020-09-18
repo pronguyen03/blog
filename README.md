@@ -4,6 +4,8 @@ TODO:
 - Blog post: how to use
 - Post to angular
 - Document install invironment for angular 
+- from git clone, npm i ....
+- one blog post title: create a blog for free
 
 A minimal blogging app using [Angular](https://angular.io/) and [Scully](https://scully.io) with basic supports for search engine optimization (SEO).
 

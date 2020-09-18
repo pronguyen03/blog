@@ -1,19 +1,17 @@
-import { Injectable, Optional } from '@angular/core';
-import { IConfigurationService } from '../i-configuration.service';
-import { ILoggingService } from '../i-logging.service';
+import { Injectable } from '@angular/core';
 import { LogWriter } from './log-writer';
+import { LoggingService } from './logging.service';
 
 
 /**
  * Use this writer to log information to the browser console.
  */
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class ConsoleWriter extends LogWriter {
-    constructor(
-        loggingService: ILoggingService,
-        @Optional() configuration: IConfigurationService
-    ) {
-        super(loggingService, configuration)
+    constructor(loggingService: LoggingService) {
+        super(loggingService)
         // console.info('Init ConsoleWriter')
     }
 
@@ -35,11 +33,6 @@ export class ConsoleWriter extends LogWriter {
                 break
             case 'error':
                 console.error(this.targetEntry)
-                break
-            case 'debug':
-                if(this.debug) {
-                    console.info(this.targetEntry)
-                }
                 break
             default:
                 break

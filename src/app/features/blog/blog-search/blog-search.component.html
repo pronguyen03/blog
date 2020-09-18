@@ -1,11 +1,10 @@
 <div class="card my-4">
-    <h5 class="card-header text-secondary">Tìm kiếm</h5>
+    <h5 class="card-header text-secondary">{{title}}</h5>
     <div class="card-body">
         <div class="input-group">
             <input 
                 type="text" 
                 class="form-control" 
-                placeholder="Nhập từ khóa..."
                 [(ngModel)]="lastSearch"
                 #searchInput
                 (keyup.enter)="doSearch(searchInput.value)"

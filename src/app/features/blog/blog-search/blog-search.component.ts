@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SEARCH_SECTION_TITLE } from '../../../../../configuration';
 
 @Component({
   selector: 'app-blog-search',
@@ -7,7 +8,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./blog-search.component.scss']
 })
 export class BlogSearchComponent {
+  title = SEARCH_SECTION_TITLE
   lastSearch: string
+  
   constructor(private router: Router, private route: ActivatedRoute) {
     route.queryParamMap.subscribe(qM => {
       this.lastSearch = qM.get('s')

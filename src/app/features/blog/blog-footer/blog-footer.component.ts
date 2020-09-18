@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SITE_CONFIG } from 'src/app/constants';
+import { COPYRIGHT_CONTENT } from '../../../../../configuration';
 
 @Component({
   selector: 'app-blog-footer',
@@ -7,5 +7,5 @@ import { SITE_CONFIG } from 'src/app/constants';
   styleUrls: ['./blog-footer.component.scss']
 })
 export class BlogFooterComponent {
-  copyrightText = SITE_CONFIG.COPYRIGHT
+  copyrightText = COPYRIGHT_CONTENT
 }

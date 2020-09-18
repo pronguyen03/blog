@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MENUS, SITE_CONFIG } from 'src/app/constants';
+import { FIRST_NAME, LAST_NAME, MENUS } from '../../../../../configuration';
 
 @Component({
   selector: 'app-blog-navigation',
@@ -7,7 +7,7 @@ import { MENUS, SITE_CONFIG } from 'src/app/constants';
   styleUrls: ['./blog-navigation.component.scss']
 })
 export class BlogNavigationComponent {
-  SITE_CONFIG = SITE_CONFIG
-  MENUS = MENUS
+  menus = MENUS
   isMenuCollapsed = true
+  fullName = FIRST_NAME + ' ' + LAST_NAME
 }

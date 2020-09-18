@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Post } from 'src/app/models';
+import { IPost } from 'src/app/models';
+import { RELATED_POSTS_SECTION_TITLE } from '../../../../../configuration';
 
 @Component({
   selector: 'app-blog-related-posts',
@@ -9,6 +10,8 @@ import { Post } from 'src/app/models';
 })
 export class BlogRelatedPostsComponent {
 
-  @Input() relatedPosts: Post[]
+  @Input() relatedPosts: IPost[]
+
+  title = RELATED_POSTS_SECTION_TITLE
 
 }

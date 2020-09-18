@@ -27,5 +27,11 @@ export const config: ScullyConfig = {
         folder: "./blog"
       },
     },
+    // '/page/:pageSlug': {
+    //   type: 'contentFolder',
+    //   slug: {
+    //     folder: "./page"
+    //   },
+    // },
   }
 };

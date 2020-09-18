@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SITE_CONFIG } from '../../constants';
+import { FIRST_NAME, LAST_NAME, PORTFOLIO_INFO } from '../../../../configuration/site-configs';
 import { SEOService } from '../../services';
 
 @Component({
@@ -11,9 +11,10 @@ import { SEOService } from '../../services';
 export class PortfolioComponent {
   constructor(seoService: SEOService) { 
     seoService.doSEO({
-      title: 'Nhan Nguyen - ' + SITE_CONFIG.JOB_TITLE,
-      description: SITE_CONFIG.PORTFOLIO_DESC,
-      image: SITE_CONFIG.PORTFOLIO_IMAGE
+      title: FIRST_NAME+' '+LAST_NAME+' - '+PORTFOLIO_INFO.JOB_TITLE,
+      description: PORTFOLIO_INFO.INTRODUCTION,
+      image: PORTFOLIO_INFO.SHARE_IMAGE,
+      route: ''
     })
   }
 

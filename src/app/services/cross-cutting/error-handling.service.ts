@@ -1,10 +1,10 @@
 import { ErrorHandler, Injectable } from '@angular/core';
 import { ILoggingData } from 'src/app/models';
-import { ILoggingService } from './i-logging.service';
+import { LoggingService } from './logging/logging.service';
 
 @Injectable()
 export class ErrorHandlingService implements ErrorHandler {
-    constructor(private loggingService: ILoggingService) {}
+    constructor(private loggingService: LoggingService) {}
 
     handleError(error) {
         console.info('Handling error with ErrorHandlingService')

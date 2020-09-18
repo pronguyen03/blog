@@ -3,8 +3,11 @@ export interface ILoggingConfiguration {
     logglyToken: string,
 }
 
-export interface IConfiguration {
+/**
+ * Difine all necessary environment information.
+ */
+export interface IEnvironment {
+    production: boolean
     applicationName: string
-    debug: boolean
     logging: ILoggingConfiguration
 }

@@ -1,25 +1,16 @@
-import { IConfigurationService } from '../i-configuration.service';
-import { ILogWriter } from './i-log-writer';
-import { Optional } from '@angular/core';
-import { ILoggingService } from '../i-logging.service';
-import { IConfiguration, ILoggingConfiguration, ILoggingData, ILoggingFullData } from 'src/app/models';
+import { ILoggingConfiguration, ILoggingData, ILoggingFullData } from 'src/app/models';
+import { environment } from 'src/environments/environment';
+import { LoggingService } from './logging.service';
 
-export abstract class LogWriter implements ILogWriter {
+export abstract class LogWriter {
     protected configs: ILoggingConfiguration
     protected targetEntry: ILoggingFullData
-    protected debug: boolean
     private applicationName: string
 
-    constructor(
-        loggingService: ILoggingService,
-        @Optional() configuration: IConfigurationService
-    ) {
-        if(configuration) {
-            configuration.configs$.subscribe(configs => {
-                this.handleConfigs(configs)
-                loggingService.logEntries$.subscribe(log => this.handleLogEntry(log))
-            })
-        }
+    constructor(loggingService: LoggingService) {
+        this.applicationName = environment.applicationName
+        this.configs = environment.logging
+        loggingService.logEntries$.subscribe(log => this.handleLogEntry(log))
     }
 
     /**
@@ -63,15 +54,6 @@ export abstract class LogWriter implements ILogWriter {
      * Use to finish the process or clean-up any resources.
      */
     finish() { }
-
-    private handleConfigs(configs: IConfiguration) {
-        if (!configs || !configs.logging) {
-            return
-        }
-        this.applicationName = configs.applicationName
-        this.debug = configs.debug
-        this.configs = configs.logging
-    }
 
     private handleLogEntry(logEntry: ILoggingData) {
         this.targetEntry = this.getLoggingData(logEntry)

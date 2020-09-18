@@ -5,7 +5,6 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { faHome, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { ScullyLibModule } from '@scullyio/ng-lib';
-import { BlogAboutComponent } from './blog-about/blog-about.component';
 import { BlogCategoriesComponent } from './blog-categories/blog-categories.component';
 import { BlogFiltersInfoComponent } from './blog-filters-info/blog-filters-info.component';
 import { BlogFooterComponent } from './blog-footer/blog-footer.component';
@@ -27,7 +26,6 @@ import { BlogComponent } from './blog.component';
     BlogFooterComponent,
     BlogSearchComponent,
     BlogCategoriesComponent,
-    BlogAboutComponent,
     BlogPostComponent,
     BlogPostItemComponent,
     BlogFiltersInfoComponent,

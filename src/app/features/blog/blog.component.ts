@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GlobalService } from 'src/app/services/global.service';
 import { PostService } from '../../services';
 
 @Component({
@@ -7,6 +8,9 @@ import { PostService } from '../../services';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent {
-  constructor(public postService: PostService ) {}
+  constructor(
+    public postService: PostService,
+    public globalService: GlobalService
+  ) {}
 
 }

@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { Category } from 'src/app/models';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { CATEGORY_FILTER_TEXT, SEARCH_FOR_TEXT } from '../../../../../configuration';
+import { ICategory } from 'src/app/models';
 
 @Component({
   selector: 'app-blog-filters-info',
@@ -8,6 +9,8 @@ import { Category } from 'src/app/models';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BlogFiltersInfoComponent {
-  @Input() category: Category
+  @Input() category: ICategory
   @Input() searchTerm: string
+  searchForText = SEARCH_FOR_TEXT
+  categoryFilterText = CATEGORY_FILTER_TEXT
 }

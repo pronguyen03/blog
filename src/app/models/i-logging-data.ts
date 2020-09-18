@@ -14,4 +14,4 @@ export interface ILoggingFullData extends ILoggingData {
     level: LoggingLevel
 }
 
-export type LoggingLevel = 'error' | 'warn' | 'info' | 'debug'
+export type LoggingLevel = 'error' | 'warn' | 'info'
