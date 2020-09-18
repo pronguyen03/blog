@@ -5,17 +5,18 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { faHome, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { ScullyLibModule } from '@scullyio/ng-lib';
-import { BlogCategoriesComponent } from './blog-categories/blog-categories.component';
-import { BlogFiltersInfoComponent } from './blog-filters-info/blog-filters-info.component';
-import { BlogFooterComponent } from './blog-footer/blog-footer.component';
 import { BlogHomeComponent } from './blog-home/blog-home.component';
 import { BlogPostItemComponent } from './blog-home/blog-post-item/blog-post-item.component';
-import { BlogNavigationComponent } from './blog-navigation/blog-navigation.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
-import { BlogRelatedPostsComponent } from './blog-related-posts/blog-related-posts.component';
 import { BlogRoutingModule } from './blog-routing.module';
-import { BlogSearchComponent } from './blog-search/blog-search.component';
 import { BlogComponent } from './blog.component';
+import { BlogPageDetailComponent } from './blog-page-detail/blog-page-detail.component';
+import { BlogNavigationComponent } from './components/blog-navigation/blog-navigation.component';
+import { BlogSearchComponent } from './components/blog-search/blog-search.component';
+import { BlogRelatedPostsComponent } from './components/blog-related-posts/blog-related-posts.component';
+import { BlogFooterComponent } from './components/blog-footer/blog-footer.component';
+import { BlogCategoriesComponent } from './components/blog-categories/blog-categories.component';
+import { BlogFiltersInfoComponent } from './components/blog-filters-info/blog-filters-info.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { BlogComponent } from './blog.component';
     BlogPostComponent,
     BlogPostItemComponent,
     BlogFiltersInfoComponent,
-    BlogRelatedPostsComponent
+    BlogRelatedPostsComponent,
+    BlogPageDetailComponent
   ],
   imports: [
     CommonModule,

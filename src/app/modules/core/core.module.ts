@@ -9,21 +9,14 @@ import {
 import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
 import { NgxLogglyModule } from 'ngx-loggly-logger';
 import { ConsoleWriter, ErrorHandlingService, InitLoggingAndWriters, LoggingService, LogglyWriter } from 'src/app/services';
-import { GOOGLE_ANALYTICS_TRACKING_ID, LOGGLY_TOKEN } from '../../../../configuration';
+import { GOOGLE_ANALYTICS_TRACKING_ID } from '../../../../configuration';
 
-export const CORE_IMPORTS = []
-    
-if (LOGGLY_TOKEN) {
-  CORE_IMPORTS.push(NgxLogglyModule.forRoot())
-}
-
-if (GOOGLE_ANALYTICS_TRACKING_ID) {
-  CORE_IMPORTS.push(
-    NgxGoogleAnalyticsModule.forRoot(
-      GOOGLE_ANALYTICS_TRACKING_ID
-    )
+export const CORE_IMPORTS = [
+  NgxLogglyModule.forRoot(),
+  NgxGoogleAnalyticsModule.forRoot(
+    GOOGLE_ANALYTICS_TRACKING_ID
   )
-}
+]
 
 export const CORE_PROVIDERS = [
   {

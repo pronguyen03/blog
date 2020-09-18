@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { CATEGORIES, CATEGORIES_SECTION_TITLE } from '../../../../../configuration';
+import { CATEGORIES, CATEGORIES_SECTION_TITLE } from '../../../../../../configuration';
 
 @Component({
   selector: 'app-blog-categories',
