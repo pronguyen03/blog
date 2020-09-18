@@ -1,9 +1,7 @@
-# ngx-scully-blog
+# Ngx-scully-blog: A simple blog for developers that is easy to setup and SEO supported.
 
 sitemap
-https://startbootstrap.com/themes/resume
-https://startbootstrap.com/templates/blog-home
-http://startbootstrap.com/templates/blog-post
+
 
 A minimal blogging app using [Angular](https://angular.io/) and [Scully](https://scully.io) with basic supports for search engine optimization (SEO).
 
@@ -115,3 +113,11 @@ npm run scully:serve
 
 ng build --prod && npm run scully && npm run scully:serve
 ng build && npm run scully && npm run scully:serve
+
+## References
+This project uses resources from:
+- [Angular](https://angular.io)
+- [Scully.io](https://scully.io)
+- [Start Bootstrap Resume theme](https://startbootstrap.com/themes/resume)
+- [Start Bootstrap Blog Home template](https://startbootstrap.com/templates/blog-home)
+- [Start Bootstrap Blog Post template](http://startbootstrap.com/templates/blog-post)
