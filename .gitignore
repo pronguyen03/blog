@@ -46,3 +46,6 @@ testem.log
 Thumbs.db
 scully.log
 package-lock.json
+firebase.json
+.firebaserc
+/.firebase

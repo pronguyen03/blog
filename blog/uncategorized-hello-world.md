@@ -10,8 +10,6 @@ image: assets/images/uncategorized-hello-world/hello-world.jpg
 
 # Hello World
 
-![hello world image](assets/images/uncategorized-hello-world/hello-world.jpg)
-
 ```html
 <!DOCTYPE html>
 <html lang="en">

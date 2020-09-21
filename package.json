@@ -12,7 +12,8 @@
     "scully": "scully",
     "scully:serve": "scully serve",
     "scully:preview": "ng build --prod && npm run scully && npm run scully:serve",
-    "scully:deploy": "ng build --prod && npm run scully && firebase deploy"
+    "scully:deploy": "ng build --prod && npm run scully && firebase deploy",
+    "postinstall": "ngcc"
   },
   "private": true,
   "dependencies": {

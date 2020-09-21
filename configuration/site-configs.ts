@@ -1,11 +1,15 @@
 /**
  * Your root url.
  * This url display your portfolio page.
+ * 
+ * Normally, this url is: your-firebase-project-name.web.app
  */
 export const ROOT_SITE_URL = 'https://yourdomain.com'
 /**
  * Your blog url.
  * This url display your blog home page.
+ * 
+ * Normally, this url is: your-firebase-project-name.web.app/blog
  */
 export const ROOT_BLOG_URL = 'https://yourdomain.com/blog'
 /**
@@ -33,7 +37,7 @@ export const GITHUB_URL = 'https://github.com'
  */
 export const TWITTER_URL = 'https://twitter.com'
 /**
- * Your email address
+ * Your email address.
  */
 export const EMAIL = 'your@email.com'
 /**
