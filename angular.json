@@ -7,8 +7,8 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "inlineTemplate": true,
-          "inlineStyle": true,
+          "inlineTemplate": false,
+          "inlineStyle": false,
           "style": "scss",
           "skipTests": true
         },
@@ -52,9 +52,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ],
+            "allowedCommonJsDependencies": [
+              "ng2-cookies"
+            ]
           },
           "configurations": {
             "production": {

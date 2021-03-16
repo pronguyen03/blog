@@ -1,31 +1,21 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { BlogComponent } from './blog/blog.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
+  { 
+    path: '', 
+    loadChildren: () => import('./features/portfolio/portfolio.module').then(m => m.PortfolioModule) 
   },
-  {
-    path: 'about',
-    component: AboutComponent,
+  { 
+    path: 'blog', 
+    loadChildren: () => import('./features/blog/blog.module').then(m => m.BlogModule) 
   },
-  {
-    path: 'blog/:slug',
-    component: BlogComponent,
-  },
-  {
-    path: '**',
-    component: HomeComponent,
-  }
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
