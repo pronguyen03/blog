@@ -1,0 +1,32 @@
+<app-blog-navigation></app-blog-navigation>
+
+<div class="container mt-4" id="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+            <app-blog-filters-info
+                [category]="postService.category$ | async"
+                [searchTerm]="postService.searchTerm$ | async"
+                ></app-blog-filters-info>
+        
+            <router-outlet></router-outlet>
+
+            <!-- https://github.com/scullyio/scully/issues/920#issuecomment-693464927 -->
+            <app-blog-related-posts 
+                *ngIf="globalService.isReadingAPost"
+                [relatedPosts]="postService.relatedPosts"
+                ></app-blog-related-posts>
+        </div>
+    
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+            <app-blog-search></app-blog-search>
+            <!--https://github.com/scullyio/scully/issues/920#issuecomment-692111016-->
+            <app-blog-categories 
+                *ngIf="!globalService.isReadingAPage && !globalService.isReadingAPost"
+                ></app-blog-categories>
+        </div>
+    </div>
+</div>
+
+<app-blog-footer></app-blog-footer>

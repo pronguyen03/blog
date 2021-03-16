@@ -1,27 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ScullyLibModule } from '@scullyio/ng-lib';
-
-import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BlogComponent } from './blog/blog.component';
-import { HomeComponent } from './home/home.component';
-import { SEOService } from './seo.service';
+import { CoreModule } from './modules/core/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AboutComponent,
-    HomeComponent,
-    BlogComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ScullyLibModule
+    CoreModule
   ],
-  providers: [SEOService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
