@@ -22,7 +22,7 @@ export const config: ScullyConfig = {
   projectRoot: "./src",
   projectName: "ngx-scully-blog",
   outDir: './dist/static',
-  defaultPostRenderers: postRenderers,
+  // defaultPostRenderers: postRenderers,
   puppeteerLaunchOptions: {
     args: [
       "--disable-gpu",
@@ -40,7 +40,7 @@ export const config: ScullyConfig = {
     ]
   },
   routes: {
-    '/blog/:slug': {
+    '/:slug': {
       type: 'contentFolder',
       slug: {
         folder: "./blog"

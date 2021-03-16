@@ -34,7 +34,7 @@
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "@scullyio/init": "^1.1.1",
     "@scullyio/ng-lib": "^1.1.0",
-    "@scullyio/scully": "^1.0.0-beta.6",
+    "@scullyio/scully": "^1.1.0",
     "bootstrap": "^4.5.0",
     "fast-xml-parser": "^3.17.4",
     "ngx-google-analytics": "^11.2.0",

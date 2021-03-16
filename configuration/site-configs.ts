@@ -9,9 +9,9 @@ export const ROOT_SITE_URL = 'https://yourdomain.com'
  * Your blog url.
  * This url display your blog home page.
  * 
- * Normally, this url is: your-firebase-project-name.web.app/blog
+ * Normally, this url is: your-firebase-project-name.web.app
  */
-export const ROOT_BLOG_URL = 'https://yourdomain.com/blog'
+export const ROOT_BLOG_URL = 'https://yourdomain.com'
 /**
  * Your first name
  */
