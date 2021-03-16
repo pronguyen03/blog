@@ -6,13 +6,6 @@
  */
 export const ROOT_SITE_URL = 'https://yourdomain.com'
 /**
- * Your blog url.
- * This url display your blog home page.
- * 
- * Normally, this url is: your-firebase-project-name.web.app
- */
-export const ROOT_BLOG_URL = 'https://yourdomain.com'
-/**
  * Your first name
  */
 export const FIRST_NAME = 'FirstName'
@@ -67,7 +60,7 @@ export const PORTFOLIO_INFO = {
      * `https://yourdomain.com/assets/images/your-image-name`. For example, 
      * `https://yourdomain.com/assets/images/profile.jpg`
      */
-    PROFILE_IMAGE: '',
+    PROFILE_IMAGE: 'https://yourdomain.com/assets/images/profile.jpg',
     /**
      * An image that is displayed in the preview section when you post your portfolio url on social networks.
      * 
@@ -76,7 +69,7 @@ export const PORTFOLIO_INFO = {
      * `https://yourdomain.com/assets/images/your-image-name`. For example, 
      * `https://yourdomain.com/assets/images/preview.jpg`
      */
-    SHARE_IMAGE: '',
+    SHARE_IMAGE: 'https://yourdomain.com/assets/images/preview.jpg',
 }
 
 /**
@@ -87,7 +80,7 @@ export const BLOG_INFO = {
      * An description that is displayed in the preview section when you post your blog home url on social networks.
      * Tell people who you are and what is your blog about.
      */
-    DESCRIPTION: '',
+    DESCRIPTION: 'An description that is displayed in the preview section when you post your blog home url on social networks.',
     /**
      * An image that is displayed in the preview section when you post your blog home url on social networks.
      * 
@@ -96,16 +89,16 @@ export const BLOG_INFO = {
      * `https://yourdomain.com/assets/images/your-image-name`. For example, 
      * `https://yourdomain.com/assets/images/preview.jpg`
      */
-    SHARE_IMAGE: '',
+    SHARE_IMAGE: 'https://yourdomain.com/assets/images/preview.jpg',
     /**
      * Phrases that discribe what your blog is about, separated by comma.
      * For example: "angular, frontend programming, javascript programming"
      */
-    KEYWORDS: '',
+    KEYWORDS: 'angular, frontend programming, javascript programming',
     /**
      * Default title of your blog. This should be your blog name or your nick name. 
      * 
      * For example: Nhan Nguyen Da Coder, David blog
      */
-    DEFAULT_TITLE: ''
+    DEFAULT_TITLE: 'Default title'
 }
