@@ -21,7 +21,7 @@ jobs:
             - ./node_modules
       - run:
           name: Build and deploy to Firebase
-          command: npm run scully:deploy --token "$FIREBASE_TOKEN"
+          command: npm run scully:build && ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
   build-and-deploy-nhannguyendacoder:
     docker: 
       - image: circleci/node:lts-browsers
@@ -43,12 +43,13 @@ jobs:
             - ./node_modules
       - run:
           name: Build and deploy to Firebase
-          command: npm run scully:deploy --token "$FIREBASE_TOKEN_NHAANCS"
+          command: npm run scully:build && ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN_NHAANCS"
 workflows:
   version: 2.1
   deploy-master:
     jobs:
       - build-and-deploy-master:
+          context: NGX-SCULLY-CONTEXT
           filters:
             branches:
               only:
@@ -56,6 +57,7 @@ workflows:
   deploy-nhannguyendacoder:
     jobs:
       - build-and-deploy-nhannguyendacoder:
+          context: NGX-SCULLY-CONTEXT
           filters:
             branches:
               only:
