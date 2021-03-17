@@ -16,12 +16,12 @@ export const MENUS: IMenu[] = [
     /**
      * Navigate to blog home page
      */
-    {name: 'Home', route: '/blog', icon: ['fas', 'home']},
+    {name: 'Home', route: '/', icon: ['fas', 'home']},
     /**
      * Navigate to about page
      * 
      * Content of this page is the content of `about.md` file in 
      * `ngx-scully-blog/blog/page` folder.
      */
-    // {name: 'About', route: '/blog/page/about'},
+    // {name: 'About', route: '/page/about'},
 ]
