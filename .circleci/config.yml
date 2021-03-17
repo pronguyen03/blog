@@ -21,19 +21,15 @@ jobs:
             - ./node_modules
       - run:
           name: Build and deploy to Firebase
-          command: npm run scully:build && ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
+          command: npm run scully:build && ./node_modules/.bin/firebase deploy --token $FIREBASE_TOKEN
 workflows:
   version: 2.1
   deploy-nhannguyendacoder:
     jobs:
       - build-and-deploy:
-          context: NGX-SCULLY-CONTEXT
+          context: NHANNGUYENDACODER
           filters:
             branches:
               only:
                 - nhannguyendacoder
-
-
-
-
-
+                
