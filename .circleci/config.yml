@@ -1,6 +1,10 @@
 version: 2.1
 jobs:
   build-and-deploy-to-firebase:
+    filters:
+      branches:
+        only:
+          - master
     docker: 
       - image: circleci/node:lts-browsers
     working_directory: ~/blog
