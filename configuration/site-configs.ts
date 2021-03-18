@@ -80,7 +80,7 @@ export const BLOG_INFO = {
      * An description that is displayed in the preview section when you post your blog home url on social networks.
      * Tell people who you are and what is your blog about.
      */
-    DESCRIPTION: 'An description that is displayed in the preview section when you post your blog home url on social networks.',
+    DESCRIPTION: 'Your blog description',
     /**
      * An image that is displayed in the preview section when you post your blog home url on social networks.
      * 
@@ -94,11 +94,11 @@ export const BLOG_INFO = {
      * Phrases that discribe what your blog is about, separated by comma.
      * For example: "angular, frontend programming, javascript programming"
      */
-    KEYWORDS: 'angular, frontend programming, javascript programming',
+    KEYWORDS: 'your keyword 1, your keyword 2, your keyword 3',
     /**
      * Default title of your blog. This should be your blog name or your nick name. 
      * 
      * For example: Nhan Nguyen Da Coder, David blog
      */
-    DEFAULT_TITLE: 'Default title'
+    DEFAULT_TITLE: 'Your title'
 }

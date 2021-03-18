@@ -12,5 +12,6 @@ import { ICategory } from '../../src/app/models'
  */
 export const CATEGORIES: ICategory[] = [
     {key: '', displayName: 'All'},
+    {key: 'tutorials', displayName: 'Tutorials'},
     {key: 'uncategorized', displayName: 'Uncategorized'},
 ]
