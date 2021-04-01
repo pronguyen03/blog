@@ -5,7 +5,7 @@ published: true
 keywords: hello world
 categories: uncategorized
 date: 2020-09-17
-image: assets/images/uncategorized-hello-world/hello-world.jpg
+image: assets/images/hello-world/hello-world.jpg
 ---
 
 # Hello World
