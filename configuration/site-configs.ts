@@ -1,6 +1,5 @@
 /**
  * Your root url.
- * This url display your portfolio page.
  * 
  * Normally, this url is: your-firebase-project-name.web.app
  */
@@ -39,7 +38,7 @@ export const EMAIL = 'your@email.com'
 export const COPYRIGHT_CONTENT = `Copyright &copy; ${new Date().getFullYear()}. All Rights Reserved.`
 
 /**
- * Information that are displayed on your portfolio page
+ * Your Information that are displayed on the blog
  */
 export const PORTFOLIO_INFO = {
     /**
