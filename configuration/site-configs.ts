@@ -51,15 +51,6 @@ export const PORTFOLIO_INFO = {
      * `https://yourdomain.com/assets/images/profile.jpg`
      */
     PROFILE_IMAGE: '',
-    /**
-     * An image that is displayed in the preview section when you post your portfolio url on social networks.
-     * 
-     * You can provide an image link here, or add an image to 
-     * `ngx-scully-blog/src/assets/images` folder and provide a link as following format
-     * `https://yourdomain.com/assets/images/your-image-name`. For example, 
-     * `https://yourdomain.com/assets/images/preview.jpg`
-     */
-    SHARE_IMAGE: 'https://yourdomain.com/assets/images/preview.jpg',
 }
 
 /**
