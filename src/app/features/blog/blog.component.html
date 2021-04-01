@@ -12,7 +12,9 @@
                 ></app-blog-categories>
 
             <app-blog-search></app-blog-search>
+            <!--https://github.com/scullyio/scully/issues/920#issuecomment-692111016-->
             <app-blog-filters-info
+                *ngIf="!globalService.isReadingAPage && !globalService.isReadingAPost"
                 [category]="postService.category$ | async"
                 [searchTerm]="postService.searchTerm$ | async"
                 ></app-blog-filters-info>
