@@ -12,22 +12,13 @@ export const FIRST_NAME = 'FirstName'
  * Your last name
  */
 export const LAST_NAME = 'LastName'
-/**
- * Your Facebook profile url. Leave it blank to hide on the site.
- */
-export const FACEBOOK_URL = 'https://www.facebook.com'
-/**
- * Your Linkedin profile url. Leave it blank to hide on the site.
- */
-export const LINKEDIN_URL = 'https://www.linkedin.com'
-/**
- * Your Github profile url. Leave it blank to hide on the site.
- */
-export const GITHUB_URL = 'https://github.com'
-/**
- * Your Twitter profile url. Leave it blank to hide on the site.
- */
-export const TWITTER_URL = 'https://twitter.com'
+
+export const SOCIAL_LINKS = [
+    { title: 'Linkedin', url: 'https://linkedin.com', icon: ['fab', 'linkedin-in'], size: '1x' },
+    { title: 'Github', url: 'https://github.com', icon: ['fab', 'github'], size: '1x' },
+    { title: 'Twitter', url: 'https://twitter.com', icon: ['fab', 'twitter'], size: '1x' },
+    { title: 'Facebook', url: 'https://facebook.com', icon: ['fab', 'facebook-f'], size: '1x' },
+]
 /**
  * Your email address.
  */
@@ -56,10 +47,10 @@ export const PORTFOLIO_INFO = {
      * 
      * You can provide an image link here, or add an image to 
      * `ngx-scully-blog/src/assets/images` folder and provide a link as following format  
-     * `https://yourdomain.com/assets/images/your-image-name`. For example, 
+     * `https://yourdomain.com/assets/images/your-image-name.jpg`. For example, 
      * `https://yourdomain.com/assets/images/profile.jpg`
      */
-    PROFILE_IMAGE: 'https://yourdomain.com/assets/images/profile.jpg',
+    PROFILE_IMAGE: '',
     /**
      * An image that is displayed in the preview section when you post your portfolio url on social networks.
      * 
